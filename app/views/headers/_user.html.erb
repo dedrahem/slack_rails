@@ -1,0 +1,26 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="user">
+      <a><%= link_to 'Slack Rails', root_path %></a>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%=@current_user.first_name%></li>
+            <a><%=link_to 'Logout', logout_path, method: :delete%></a>
+          </ul>
+        </nav>
+    </div> <!-- close the user -->
+  </div> <!-- close the container -->
+</header>
+
+
+<!-- We have bestowed upon the header tag, 3, count 'em, three -->
+<!-- CSS classes, and they are, nav navbar-nav navbar-right -->
+<!-- HTML elements can be assigned both classes and ID's -->
+<!-- again, both classes and ID's.  -->
+<!-- classes may be used multiple times on a page -->
+<!-- ID's may be used only once, they are specific -->
+<!-- the nav class has a special meaning to BOOTSTRAP -->
+<!-- container is specific to BOOTSTRAP -->
+<!-- and the nav tag does nothing here but serves to -->
+<!-- add division for readability -->
+<!-- how's that !  -->

@@ -1,0 +1,65 @@
+.guest {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  background-color: #ef5401; /* ef5401 aprox rocket man orange */
+  height: 65px;
+  padding: 10px 10px 10px 10px;
+    a {
+      float: left;
+      margin-right: 10px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #0a0a0a;   /* #0a0a0a another shade of black */
+    &:hover {
+      color: #0612bf; /* #0612bf a striking blue against the rocket man orange */
+      font-size: 1.2em;
+      text-decoration: none;
+    }   /* closes the hover above     */
+  }     /* closes the a bracket above */
+  ul {
+    float:right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 0px;
+    } /* close the li                   */
+  }   /* close the ul                   */
+}     /* close the guest bracket        */
+
+.user {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  background-color: #c2c2c2; /* c2c2c2 light shade of gray */
+  height: 65px;
+  padding: 10px 10px 10px 10px;
+    a {
+      float: left;
+      margin-right: 10px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #0a0a0a;   /* #0a0a0a another shade of black */
+    &:hover {
+      color: #0612bf; /* #0612bf a striking blue against the rocket man orange */
+      font-size: 1.2em;
+      text-decoration: none;
+    }   /* closes the hover above     */
+  }     /* closes the a bracket above */
+  ul {
+    float:right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 0px;
+      padding-right: 32px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-weight: bold;
+    } /* close the li  */
+  }   /* close the ul                   */
+}     /* close the user bracket         */

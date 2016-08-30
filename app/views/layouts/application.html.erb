@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SlackRails</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <title>MySlackApp</title>
+    <%= stylesheet_link_tag('application', {media: 'all', 'data-turbolinks-track': 'reload'}) %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <%= render 'headers/header' %>
     <%= yield %>
   </body>
 </html>
+
+<!-- line 5, stylesheet_link_tag is a built in Rails function, see RAPI -->
+<!-- will cause an include of application.css for all media types -->
+<!-- notice how that line is HEAVY with ruby code -->
+<!-- the line calls the link_tag function with two args, -->
+<!-- a string indicating the path to the style stylesheet  -->
+<!-- and a hash of two elements, one indicating the media type -->
+<!-- and the second instructing rails to use the turbolinks feature -->
+<!-- what is the difference between true and reload -->

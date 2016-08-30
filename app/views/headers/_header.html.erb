@@ -1,0 +1,5 @@
+<% if @current_user %>
+  <%= render 'headers/user' %>
+<% else %>
+  <%= render 'headers/guest' %>
+<% end %>
