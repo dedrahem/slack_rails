@@ -1,11 +1,19 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<!-- navbar is a class style it with a .navbar                       -->
+<!-- navbar doesn't do much on its own, 'cept for to say hey! navbar -->
+<!-- and provide a class name that you can later style via .navbar   -->
+<!--  navbar-fixed-top pins the navbar to pagetop, unmoveable-FIXED  -->
+<!--  navbar-inverse makes the bar shade DARK, experiment with this  -->
+<!--  -->
+<!--  -->
+
+<header class="navbar navbar-fixed-top">
   <div class="container">
     <div class="user">
-      <a><%= link_to 'Slack Rails', root_path %></a>
+      <a class="headers"><%= link_to 'Slack Rails', root_path %></a>
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%=@current_user.first_name%></li>
-            <a><%=link_to 'Logout', logout_path, method: :delete%></a>
+            <a class="headers"><%=link_to 'Logout', logout_path, method: :delete%></a>
           </ul>
         </nav>
     </div> <!-- close the user -->

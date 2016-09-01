@@ -1,20 +1,26 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-@import 'normalize-rails';
-@import 'header';
-/* with the SASS and Sprockets work from the    */
-/* application stylesheet by naming THIS sheet  */
-/* as custom.css.scss and placing in the pipe   */
-/* p194 - bootstrap's @imports are here !       */
-/* the imports are also in the application.scss */
+/* custom.css.scss */
 
-/* variables and defn and mixins, SASS MIXINS  */
+/*                        BODY STYLING                  */
 
-$gray-medium-light: #eaeaea;
-/* below is a SASS mix-in box_sizing which allows */
-/* a group of CSS rules to be used for multiple elements */
-/* works with the debug_dump - This mixin is called box_sizing */
+/* body, !notice it IS NOT called as .body ref page 191 */
+/* padding top puts 65px of pad at the TOP of the page  */
+/* with the navbar blah blah top class of the header    */
+/* tag, bootstrap will stick the navigation menu to     */
+/* pagetop. top padding will then push the page down    */
+body {
+  padding-top: 70px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+/*                        BODY STYLING                    */
 
+
+/* below is a SASS mix-in box_sizing which allows a group */
+/* of CSS rules to be used for multiple elements          */
   @mixin box_sizing {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -22,22 +28,7 @@ $gray-medium-light: #eaeaea;
   }
 
 
-/* universal styling for all the pages */
-
-/* body, notice it IS NOT called as .body         */
-/* p191 padd top puts 65px of pad at TOP of page  */
-/* with the navbar*top class of the header tag    */
-/* bootstrap will stick the navigation menu to    */
-/* pagetop, this top pad will push the page down  */
-body {
-  padding-top: 65px;
-  border-top: 4px;
-  border-right: 1px;
-  border-bottom: 1px;
-  border-left: 1px;
-  border-color: black;
-  border-style: solid;
-}
+/*          universal styling for all the pages           */
 
 section {
   overflow:auto;
@@ -47,21 +38,32 @@ textarea {
   resize: vertical;
 }
 
-/* what does the . do ? .center ???         */
-/* it indicates the rule is styling a class */
-/* elements in any tag, such as a div tag,  */
-/* with a class of center is to be styled   */
-/* per this instruction                     */
-/* the dot in .center indicaters the rule   */
-/* will style a class                       */
+/*        what does the . do ? .center ???                */
+/*        it indicates the rule is styling a class.       */
+/*        elements in any tag, such as a div tag,         */
+/*        with a class of center is to be styled          */
+/*        per this instruction                            */
+/*        the dot in .center indicaters the rule          */
+/*        will style a class                              */
+
 .center {
-  text-align: center;
+  text-align: left;
   h1 {
     margin-bottom: 10px;
   }
 }
+/* NOTICE that the above is equivalent to the below in */
+/* regards to the code for the h1 div, this is nesting */
+/* .center h1 {             */
+/*   margin-bottom: 10px;   */
+/* }                        */
 
-/* text and type items styling i.e. FONTS */
+
+
+
+
+
+/*                text and type items styling i.e. FONTS */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -88,233 +90,4 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-/* END - text and type items styling */
-
-
-/* USERS INDEX USERS INDEX  USERS INDEX  USERS INDEX  */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid gray;
-  }
-}
-
-/* HEADER - - - - - - - - - HEADER yes it's a partial */
-/* the header is styled in the _header.scss file      */
-/* END HEADER                              END HEADER */
-
-/*  FOOTER FOOTER FOOTER      FOOTER FOOTER FOOTER    */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 0px solid #eaeaea;
-  color: #777;
-  a {
-    color: $gray;
-    &:hover {
-      color: #222;
-    }
-  }
-    small {
-    float: left;
-  }
-  ul {
-     float: right;
-     list-style: none;
-  li {
-     float: left;
-     margin-left: 15px;
-    }
-  }
-}
-
-/* FOOTER  END  FOOTER  FOOTER  END  FOOTER  FOOTER  END  FOOTER  */
-
-          /* SIDEBAR For USER -- SIDEBAR For USER -- SIDEBAR For USER */
-          /* Candygram for Mongo Candygram for Mongo   */
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-      margin-top: 20px;
-      &:first-child {
-        border: 0;
-        border-color: green;
-        padding-top: 0;
-      }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 8px;
-      text-align:left;
-      letter-spacing: 1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
-/* .......          SIDEBAR   END   ........... */
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 12px;
-      text-align: left;
-      letter-spacing: 1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-/* .......          SIDEBAR  Section STATS ........... */
-.stats {
-  overflow: auto;
-  margin-top: 0;
-  padding: 0;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
-
-.users.follow {
-  padding: 10px;
-}
-
-
-/* SESSIONS forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-  }
-
-input {
-  height: auto !important;
-}
-
-#error_explanation {
-  color: red;
-  ul {color: red;
-  margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}
-
-/*        the posts               dasBlurben     */
-/*                                               */
-/*  ##########################################   */
-.microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 10px 0px;
-    border-top: 3px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-  .userimage {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-    }
-  }
-
-  aside {
-    textarea {
-      height: 100px;
-      margin-bottom: 5px;
-    }
-  }
-  span.picture {
-    margin-top: 10px;
-    input {
-      border: 0;
-    }
-  }
-
-/*                the posts dasBlurben          */
-/*                    END END END               */
-/*  ##########################################  */
-
-
-
-/* SESSIONS forms CSS for REMEMBER checkbox */
-/*  .checkbox {                           */
-/*                                        */
-/*    margin-top: -10px;                  */
-/*    margin-bottom: 10px;                */
-/*    span {                              */
-/*      margin-left: 20px;                */
-/*      font-weight: normal;              */
-/*    }                                   */
-/*  }                                     */
-/*                                        */
-/*  #session_remember_me {                */
-/*    width: auto;                        */
-/*    margin-left: 1px;                   */
-/*  }                                     */
-
-
-
-/*  ^^^^^^^^^^    END     BOTTOM OF FILE  ^^^^^^^^^   */
+/*                     END - text and type items styling */

@@ -1,11 +1,35 @@
-<%= link_to 'New Team', new_team_path %>
+<!-- here you are then, app/views/teams/root/index -->
 
-<%= link_to 'Team Directory', team_directory_path %>
+<div class="container">     <!-- the primary container -->
+  <div class="row">         <!-- the first and only row as div -->
 
-<% @teams.each do |team| %>
-  <div class="team">
-    <p><%= link_to team.name, team_path(team) %></p>
-    <p><%= team.description %></p>
-    <p><%= pluralize(team.users.count, 'User') %></p>
-  </div>
-<% end %>
+    <div class="col-md-8">  <!-- column 1 of 2 -->
+      <h1>My Channels </h1>
+      <% @teams.each do |team| %>
+        <div class="team">
+          <p><%= link_to team.name, team_path(team) %></p>
+          <p><%= team.description %></p>
+          <p><%= pluralize(team.users.count, 'User') %></p>
+        </div>              <!-- close team div -->
+      <% end %>
+    </div>                  <!-- close column 1 of 2 -->
+
+      <!-- div class="clearfix visible-md" -->
+
+    <div class="col-md-4">  <!-- column 2 of 2 -->
+      <h1>Team Utilities </h1>
+        <div class="row">
+          <div class="col-md-12">
+            <%= link_to 'New Team', new_team_path %>
+            <p>Create a new team utility, use this link to create new team</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <%= link_to 'Team Directory', team_directory_path %>
+            <p>list of teams with utilities for creating adding etc list here</p>
+          </div>
+        </div>
+    </div>                  <!-- close this column 2 of 2  -->
+  </div>                    <!-- close the first row div     -->
+</div>                      <!-- close the primary container -->

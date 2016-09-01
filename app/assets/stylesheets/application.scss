@@ -1,5 +1,19 @@
 @import 'normalize-rails';
 @import 'header';
+@import 'custom';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
-/* pages 189 and 194 i used for help w/@imports */
-/* intent is custom will be the style master    */
+/* - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*    "bootstrap-sprockets" must be imported        */
+/*    before "bootstrap" and "bootstrap/variables"  */
+/*    pages 189 and 194 i used for help w/@imports  */
+/*    'intent' is custom will be the style master   */
+/*    And it can be, when you include the @import   */
+/*    for the stylesheet as seen above.  When the   */
+/*    stylesheet_link_tag('application', is         */
+/*    executed in layout/application the imports    */
+/*    are performed.  This works for SCSS.          */
+/*    CSS ontheotherhand is done with require_      */
+/*    GOODBYE PORK PIE HAT                          */
+/* - - - - - - - - - - - - - - - - - - - - - - - -  */
