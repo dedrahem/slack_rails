@@ -47,7 +47,6 @@ body {
 
 /*          universal styling for all the pages           */
 
-
 section {
   overflow:auto;
 }
@@ -154,12 +153,23 @@ p.one {
     }
   }
 
+  #globlinktwo {
+    color: #3379b7;
+    font-size: 1.3em;
+    line-height: 1.7em;
+    &:hover{
+    text-decoration: none;
+    }
+  }
+
+
 /*                     END - text and type items styling */
 
 /*  - - - - - -   more of teams/root/index.html.erb  - - - - - -  */
 /* column height not matching row, clearfix did not work here     */
 /* dont ask why this did, gave the bad row an id name of indexrow */
 /* the two columns were already id'd as rootcol1 and rootcol2     */
+/* http://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height */
 .indexrow {
   overflow: hidden;
 }
@@ -179,16 +189,6 @@ p.one {
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-
-
-
-
-
-
-
-
-
-
 /*  FORMS              ***                        FORMS  */
 
 /* this affects form for session log-in and box border   */
@@ -200,17 +200,14 @@ input, textarea, select, .uneditable-input {
   @include box-sizing;
 }
 
-
 input {
   height: auto !important;
 }
-
 
 /*  FORMS                 END                      FORMS  */
 
 /*  FORMS   the item below is for simple form     FORMS  */
 /*  see the create user form at users/_form.html.erb     */
-
 
 .create {
     background-color: #ff6d1f;  /* button fill */

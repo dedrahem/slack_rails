@@ -1,6 +1,17 @@
-<%= simple_form_for @team do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
+<!-- just say NO, to JUMBOtron                      -->
+<!-- the JUMBO actually go into the rendering file  -->
+<!-- NOT the form                                   -->
+<!-- we must start with the container THEN the row  -->
+<div class="container-fluid">
+  <div class="row"> <!--   THIS IS THE FIRST ROW    -->
 
-  <%= f.button :submit %>
-<% end %>
+    <%= simple_form_for @team do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.button :submit %>
+    <% end %>
+
+  </div> <!--   CLOSE THIS IS THE FIRST ROW    -->
+</div>
+
+<!-- ATTEMPT THIS WITHOUT THE JUMBOTRON  -->
