@@ -1,34 +1,59 @@
-.guest {
-  display: flex;
-  align-items: center;  /* up and down */
-  /* justify-content:flex-start; */
+
+.guesthdr {
   background-color: #ef5401; /* ef5401 aprox rocket man orange */
-  height: 65px;
   padding: 0px 0px 0px 0px;
+}
+/* dot box exists to offer some background color above and */
+/* below the header and container used for the header      */
+.box {
+  background-color: #ef5401; /* ef5401 aprox rocket man orange */
+  padding: 0px 0px 0px 0px;
+  height: 10px;
+  width: auto;
+}
+/* similar function to above but applied to user's header */
+.hdrband {
+  background-color: #ef5401; /*  light blue #74a9f7  */
+  padding: 0px 0px 0px 0px;
+  height: 10px;
+  width: auto;
 }
 
 .brand {
-  font-size: 1.4em;
+  font-size: 1.5em;
   letter-spacing: 1px;
   font-weight: bold;
   color: #0a0a0a;   /* #0a0a0a another shade of black */
 }
 
-
-
 .notice {
-  font-size: 1em;
+  font-size: .9em;
   letter-spacing: 1px;
   font-weight: bold;
   color: #0a0a0a;   /* #0a0a0a another shade of black */
-  padding-top: 6px;
+  padding-top: 10px;
 }
 
 ul {
-  float:right;
+  float: left;   /* changed from right to left for small screen left align */
   list-style: none;
+  padding-right: 12px; /* pushes buttons as pair to left off rt side */
   li {
-    float: left;
-    margin-left: 0px;
+    /* float: left; this really doesn't seem to have effect */
+    padding-top: 8px;
+    padding-left: 2px;
+    padding-right: 3px;
   } /* close the li                   */
 }   /* close the ul                   */
+
+/* lobutt is user assigned id name given to the log out button */
+/* initially assigned to STOP the underline on hovering        */
+/* other attempts didn't work --  see headers/_user.html.erb   */
+/* for assignment of the id to the log out button              */
+/* see the style sheet for how #globlink is done, same way     */
+#lobutt {
+  color: #000000;
+  &:hover{
+  text-decoration: none;
+  }
+}

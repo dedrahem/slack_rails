@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    puts ":             Users Controller def new"
     @user = User.new
   end
 

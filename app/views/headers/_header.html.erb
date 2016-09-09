@@ -1,5 +1,9 @@
 <% if @current_user %>
-  <%= render 'headers/user' %>
+  <div class="container">
+    <%= render 'headers/user' %>
+  </div>
 <% else %>
-  <%= render 'headers/guest' %>
+  <div class="container">
+    <%= render 'headers/guest' %>
+  </div>
 <% end %>

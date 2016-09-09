@@ -1,9 +1,30 @@
-<%= simple_form_for @user do |f| %>
-  <%= f.input :email %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
+<!-- simple form for sign up user is, -->
+<!-- actually creating a user in the users's table  -->
+<!-- User with attributes i.e. User users user      -->
+<!-- Active Record table creation.                  -->
 
-  <%= f.button :submit, 'Register' %>
-<% end %>
+<!-- create new user sign-up in users/_form.html.erb -->
+<div class="container-fluid">
+  <div class="row"> <!--   THIS IS THE FIRST ROW    -->
+    <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :email %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation %>
+        <%= f.submit "Create New User", :class => "create" %>
+      <% end %>
+    </div>
+  </div>    <!-- THIS ENDS THE FIRST ROW  one row vertically stacked -->
+
+  <div class="row"> <!--  this is the SECOND row, this is tricky    -->
+    <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
+      <!-- class - bodybox, is a spacer, see custom.scss  -->
+      <div class="bodybox"><p></p></div>
+    </div>    <!--  END - end of the SECOND row  * * * * * * * * * *    -->
+</div> <!--  this! CONTAINER is closed  -->
+
+
+<!-- x%x= f.button :submit, "Create New User", :class => "create" % -->
+<!-- x%x= f.submit "text here", :class => "create" % -->

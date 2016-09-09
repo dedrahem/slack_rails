@@ -1,26 +1,28 @@
-<header class="navbar navbar-fixed-top">
+<header class="navbar navbar-fixed-top guesthdr">
+  <div class="box"></div> <!-- offers some color beneath the buttons -->
   <div class="container-fluid">
-    <div class="guest">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="navbar-text">
-            Slack Rails
-          </div>
-        </div> <!-- close the brand column -->
-        <div class="col-md-4">
-          <div class="navbar-text notice">
-            YOU! ARE NOT SIGNED IN
-          </div>
-        </div>          <!-- close the md-2 column for NOTICE -->
-                        <!-- ul class="nav nav-pills" -->
-        <div class="col-md-2">
-          <li><%= link_to "Sign-Up", register_path %></li>
-        </div>    <!-- close the col for nav-pills -->
-        <div class="col-md-2">
-          <li><%= link_to "Login", login_path %></li>
-        </div>    <!-- close the col for nav-pills -->
-                  <!-- ul -->
-      </div>      <!-- close the header row -->
-    </div>        <!-- close guest -->
+    <div class="navbar-text brand">
+          Slack Rails
+    </div>
+    <div class="navbar-text notice">
+          YOU! ARE NOT SIGNED IN
+    </div>
+    <nav>
+      <ul class="nav nav-pills navbar-right">
+        <!-- li><X= link_to "Sign-Up", register_path %></li -->
+        <li>
+          <a href="register" class="btn btn-primary btn-lg active" role="button">Sign-Up</a>
+        </li>
+        <li>
+          <a href="login" class="btn btn-primary btn-lg active" role="button">Log-In</a>
+        </li>
+        <!-- li><X= link_to "Log-In", login_path %></li -->
+      </ul>
+    </nav>
   </div>          <!-- close the container -->
+  <div class="box"></div> <!-- offers some color beneath the buttons -->
 </header>         <!-- close the header div -->
+
+<!-- a href="#" class="btn btn-default btn-lg active" role="button">Link</a -->
+<!-- ul class="nav navbar-nav navbar-right" ugly, L7 SULI     -->
+<!-- this line was replaced with /nav nav-pills navbar-right/ -->

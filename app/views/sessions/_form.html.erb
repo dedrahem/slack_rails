@@ -1,9 +1,56 @@
-<%= form_tag('/login') do |f| %>
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+<!--        THIS IS THE       LOG-IN FORM               -->
 
-  <%= submit_tag 'Login' %>
-<% end %>
+<% provide(:title, "Session Sign-In") %>
+<!-- <div class="center jumbotron"> is a BOOTSTARAP thing -->
+<h3> Welcome User - Please Sign-In (or Sign-Up)</h3>
+
+<% puts " "%>
+<% puts " "%>
+<% puts " STATUS:           views/sessions/new.html.erb  "       %>
+<% puts "                     rendering _form.html.erb   "%>
+<% puts " "%>
+<% puts " "%>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+  <%= form_tag('/login') do |f| %>
+
+    <div class="form-group">
+      <%= label_tag :email %>
+      <%= text_field_tag :email, "", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :password %>
+      <%= password_field_tag :password, "", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag "Sign In" , class: "btn btn-primary"%> or <%=link_to "Sign Up", register_path %>
+    </div>
+
+  <% end %> <!-- end the form tag DO -->
+            <!-- params hash of sessions created , see above -->
+  </div> <!-- close col div -->
+</div> <!-- close the row div -->
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+<!--    <div class="signupbox"></div>                     -->
+<!--    offers some color beneath the buttons in header   -->
+<!--    <div class="container-fluid>"                     -->
+<!--    <div class="row">                                 -->
+<!--    div class="col-md-2 col-md-offset-5"              -->
+<!--      <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">  -->
+<!--      <x%x= form_tag('/login') do |f| %>              -->
+<!--      <x%x= label_tag :email %>                       -->
+<!--      <x%x= email_field_tag :email %>                 -->
+<!--      <x%x= label_tag :password %>                    -->
+<!--      <x%x= password_field_tag :password %>           -->
+<!--      <p></p>                                         -->
+<!--      <x%x= submit_tag 'Log-In' %>                    -->
+<!--      <x%x end %x>                                    -->
+<!--    </div>                                            -->
+<!--    </div>                                            -->
+<!--    </div>                                            -->
+<!--    THIS IS/WAS THE  LOG-IN FORM                      -->

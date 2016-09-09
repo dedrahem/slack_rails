@@ -1,34 +1,61 @@
-<!-- navbar is a class style it with a .navbar                       -->
-<!-- navbar doesn't do much on its own, 'cept for to say hey! navbar -->
-<!-- and provide a class name that you can later style via .navbar   -->
-<!--  navbar-fixed-top pins the navbar to pagetop, unmoveable-FIXED  -->
-<!--  navbar-inverse makes the bar shade DARK, experiment with this  -->
-<!--  -->
-<!--  -->
+<!-- navbar is a class style it with a .navbar                        -->
+<!-- navbar doesn't do much on its own, 'cept for to say hey! navbar  -->
+<!-- and provide a class name that you can later style via .navbar    -->
+<!--  navbar-fixed-top pins the navbar to pagetop, unmoveable-FIXED   -->
+<!--  navbar-inverse makes the bar shade DARK, experiment with this   -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -              -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -              -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -              -->
 
-<header class="navbar navbar-fixed-top">
-  <div class="container">
-    <div class="user">
-      <a class="headers"><%= link_to 'Slack Rails', root_path %></a>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%=@current_user.first_name%></li>
-            <a class="headers"><%=link_to 'Logout', logout_path, method: :delete%></a>
-          </ul>
-        </nav>
-    </div> <!-- close the user -->
-  </div> <!-- close the container -->
+<header class="navbar navbar-fixed-top guesthdr">
+  <div class="hdrband"></div> <!-- - - color buffer box at header top -->
+  <div class="container-fluid">
+    <div class="navbar-text brand">
+      Slack Rails
+    </div>
+    <div class="navbar-text notice">
+        <%=@current_user.first_name%><%=" "%><%=@current_user.last_name%>
+    </div>
+    <!-- div class="user" -->
+      <nav>
+        <ul class="nav nav-pills navbar-right">
+          <li>
+            <a href="/teams" class="btn btn-default btn-lg active" role="button">My Channels</a>
+          </li>
+          <li>
+            <div class="btn btn-default btn-lg active" role="button">
+              <!--  SEE COMMENTS BELOW FOR USING id: FOR STYLING -->
+              <a><%=link_to 'Log-Out', logout_path, id: "lobutt", method: :delete%></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    <!-- /div> - - close the user div -->
+  </div> <!-- close the container fluid -->
+  <div class="hdrband"></div> <!-- - - color buffer box along header bottom -->
 </header>
 
-
-<!-- We have bestowed upon the header tag, 3, count 'em, three -->
-<!-- CSS classes, and they are, nav navbar-nav navbar-right -->
-<!-- HTML elements can be assigned both classes and ID's -->
-<!-- again, both classes and ID's.  -->
-<!-- classes may be used multiple times on a page -->
-<!-- ID's may be used only once, they are specific -->
-<!-- the nav class has a special meaning to BOOTSTRAP -->
-<!-- container is specific to BOOTSTRAP -->
-<!-- and the nav tag does nothing here but serves to -->
-<!-- add division for readability -->
-<!-- how's that !  -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!--       STYLING THE LOG OUT BUTTON was problematic           -->
+<!--        see the style sheet named,  _header.scss            -->
+<!--   here the <a> element, anchor tag for the log out link    -->
+<!-- was given a dedicated id, of lobutt and styled on it own.  -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- We have bestowed upon the header tag, 3, count 'em, three  -->
+<!-- CSS classes, and they are, nav navbar-nav navbar-right     -->
+<!-- HTML elements can be assigned both classes and ID's        -->
+<!-- again, both classes and ID's.                              -->
+<!-- classes may be used multiple times on a page               -->
+<!-- ID's may be used only once, they are specific              -->
+<!-- the nav class has a special meaning to BOOTSTRAP           -->
+<!-- container is specific to BOOTSTRAP                         -->
+<!-- and the nav tag does nothing here but serves to            -->
+<!-- add division for readability                               -->
+<!-- how's that !                                               -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - -        -->

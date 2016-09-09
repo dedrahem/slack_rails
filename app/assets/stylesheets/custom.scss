@@ -1,0 +1,239 @@
+/*                                          custom.css.scss         */
+
+/* DEPRECATION WARNING: Extra .css in SCSS file is unnecessary.     */
+/*  Rename /Users/douglasdrahem/MyProjects/slack_rails/app/assets/  */
+/*  stylesheets/custom.css.scss to /Users/douglasdrahem/MyProjects/ */
+/*  slack_rails/app/assets/stylesheets/custom.scss.                 */
+/*  (called from _app_views_layouts_application_html_erb__3043...   */
+/*   at /Users/douglasdrahem/MyProjects/slack_rails/app/views/      */
+/*   layouts/application.html.erb:13)                               */
+/*                                          custom.scss             */
+
+/*                        BODY STYLING                  */
+
+/* body, !notice it IS NOT called as .body ref page 191 */
+/* padding top puts 65px of pad at the TOP of the page  */
+/* with the navbar blah blah top class of the header    */
+/* tag, bootstrap will stick the navigation menu to     */
+/* pagetop. top padding will then push the page down    */
+
+/*                        BODY STYLING                    */
+
+body {
+  padding-top: 200px;/*anything less and the header will */
+  /*                  squash the content when the view   */
+  /*                  is narrowed below md sizing        */
+}
+
+/* below is a SASS mix-in box_sizing which allows a group */
+/* of CSS rules to be used for multiple elements          */
+   @mixin box_sizing {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+/*  which is seen used below with FORMS  must be         */
+/* before you use it                                     */
+
+.bodybox {
+  padding: 0px 0px 0px 0px;
+  height: 10px;
+  width: auto;
+}
+/* see users/_form.html.erb for a use of .bodybox         */
+/* bodybox was placed to prevent the create new user      */
+/* form button from slamming into the page bottom         */
+/* i.e. a spacer or band-aid                              */
+
+/*          universal styling for all the pages           */
+
+
+section {
+  overflow:auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*        what does the . do ? .center ???                */
+/*        it indicates the rule is styling a class.       */
+/*        elements in any tag, such as a div tag,         */
+/*        with a class of center is to be styled          */
+/*        per this instruction                            */
+/*        the dot in .center indicaters the rule          */
+/*        will style a class   - JUMBOTRON                */
+/* jumbotron AND .center found in sessions/new.html.erb   */
+.center {
+  text-align: left;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+/* NOTICE that the above is equivalent to the below in */
+/* regards to the code for the h1 div, this is nesting */
+/* .center h1 {             */
+/*   margin-bottom: 10px;   */
+/* }                        */
+
+/*                text and type items styling i.e. FONTS */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.0em;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #286090;            /* TEXT  - fafafa is practically WHITE ! */
+  }
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+h3 {
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+/* see jumbotron of sessions/new.html.erb   */
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+p.one {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  color: #c0f2b3;
+}
+
+.mychanls {   /*    see teams/root/index.html.erb  2 places  */
+    display: inline-block;
+    color: #167f83; /*  slack green */
+    font-family: arial;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 8px 0px 8px 0px;
+    text-decoration: none;
+    /* color: #286090; */
+  }
+
+/*  - - - - - - - -   teams/root/index.html.erb  - - - - - -  */
+.myutils {   /*    see teams/root/index.html.erb  2 places  */
+    display: inline-block;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 8px 0px 8px 0px;
+    text-decoration: none;
+    /* color: #286090; */
+  }
+/* lobutt is also the same approach as this globalink */
+/* see the headers styling for the lobutt style       */
+  #globlink {
+    color: #ffffff;
+    font-size: 1.3em;
+    line-height: 1.7em;
+    &:hover{
+    text-decoration: none;
+    }
+  }
+
+/*                     END - text and type items styling */
+
+/*  - - - - - -   more of teams/root/index.html.erb  - - - - - -  */
+/* column height not matching row, clearfix did not work here     */
+/* dont ask why this did, gave the bad row an id name of indexrow */
+/* the two columns were already id'd as rootcol1 and rootcol2     */
+.indexrow {
+  overflow: hidden;
+}
+
+[class*="rootcol"]{
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.rootcol1 {
+  background-color: #c0f2b3;
+}
+.rootcol2 {
+  background-color: #167f83;
+}
+
+/*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+
+
+
+
+
+
+
+
+
+
+/*  FORMS              ***                        FORMS  */
+
+/* this affects form for session log-in and box border   */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbbbc5; /* darkens the gray of bbbbbb a bit */
+  width: 100%;
+  margin-bottom: 10px;
+  @include box-sizing;
+}
+
+
+input {
+  height: auto !important;
+}
+
+
+/*  FORMS                 END                      FORMS  */
+
+/*  FORMS   the item below is for simple form     FORMS  */
+/*  see the create user form at users/_form.html.erb     */
+
+
+.create {
+    background-color: #ff6d1f;  /* button fill */
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #cccccc; /* gray #cccccc */
+    display: inline-block;
+    color: #286090;            /* TEXT  - fafafa is practically WHITE ! */
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 0px 8px 0px;
+    text-decoration: none;
+}
+.create:hover {
+    background-color: #286090;
+    color: #fafafa;
+}
+.create:active {
+    position: relative;
+    top: 1px;
+}
+
+/*  FORMS   simple form see above items           FORMS  */
+/*  see the create user form at users/_form.html.erb     */
