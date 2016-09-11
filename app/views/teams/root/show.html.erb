@@ -1,13 +1,16 @@
 <!-- <o%o= link_to 'My Channels', teams_path, id:  "alink"%></aoo -->
 <p>teams/root/show.html.erb</p>
-<h1>My Teams</h1>
+<h2>text here</h2>
+<!-- a little button for return to channels page -->
 <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
-<h1><%= @team.name %></h1>
+<p class="two">#Channel for: <%=@team.name %></p>
 <p><%= @team.description %></p>
 
-<h2>Team Channels</h2>
-
-<%= link_to "Create New Channel For Team : ", new_channel_path(@team.id) %><%= @team.name %>
+<h3>Discussions</h3>
+<h3><%= @team.id %></h3>
+<!-- %x=x link_to "Create New Discussion: ", new_channel_path(@team.id)%><x%x=@team.namex% -->
+<!-- <a href="/teams/4/channels/new" see the ruby added to output the id number -->
+<a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">New Discussion</a>
 
 <% @channels.each do |channel| %>
   <div class="channel">

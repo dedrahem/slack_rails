@@ -34,6 +34,12 @@ body {
   }
 /*  which is seen used below with FORMS  must be         */
 /* before you use it                                     */
+/* tip - use bootstrap for the components, i.e.          */
+/* pretty forms, nice buttons, crisp text, alerts        */
+/* quick colors                                          */
+/* THEN use FLEX for the layout - where the contents     */
+/* lay, does it flex, size and wrap                      */
+/*    - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 .bodybox {
   padding: 0px 0px 0px 0px;
@@ -114,11 +120,25 @@ p {
   line-height: 1.7em;
 }
 
+/*  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 p.one {
   font-size: 1.1em;
   line-height: 1.7em;
   color: #c0f2b3;
 }
+/* used the one class in teams/root/index.html.erb  */
+/*   <p class="one"> text blah text text  </p>
+/*   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*   < < < < < <    p.two   > > > > > > > > > > > */
+/*   < < < <   teams/root/show.html.erb  > > > >  */
+p.two {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  color: #000000;
+}
+/*    < < < < < <   p.two   > > > > > > > > */
+/*    < < < < < <   p.two   > > > > > > > > */
 
 .mychanls {   /*    see teams/root/index.html.erb  2 places  */
     display: inline-block;
