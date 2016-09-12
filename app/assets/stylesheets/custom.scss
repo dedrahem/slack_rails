@@ -75,6 +75,7 @@ textarea {
     margin-bottom: 10px;
   }
 }
+/* jumbotron AND .center found in sessions/new.html.erb   */
 /* NOTICE that the above is equivalent to the below in */
 /* regards to the code for the h1 div, this is nesting */
 /* .center h1 {             */
@@ -104,7 +105,7 @@ h2 {
   font-weight: normal;
   color: #777;
 }
-
+/* see jumbotron of sessions/new.html.erb   h3 is busy */
 h3 {
   font-size: 1em;
   letter-spacing: 1px;
@@ -113,7 +114,17 @@ h3 {
   font-weight: normal;
   color: #777;
 }
-/* see jumbotron of sessions/new.html.erb   */
+/* see jumbotron of sessions/new.html.erb   h3 is busy */
+/* using h4 in teams/root/show.html.erb   tentative    */
+h4 {
+  font-size: 8em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #777;
+}
+/* h4                                 h4               */
 
 p {
   font-size: 1.1em;
@@ -211,9 +222,169 @@ p.two {
 
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*  styling for teams/root/show.html.erb  w/flex         */
+/*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* align-content: flex-start | flex-end | center |       */
+/* space-between | space-around | stretch                */
+/* !!! align-content has no effect when there is only  !!*/
+/* !!! one line of flex items.                         !!*/
 
-/*  FORMS              ***                        FORMS  */
+.teambanner {       /* teams/root/show.html.erb */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* main axis alignment */
+  align-content: flex-start; /* cross axis alignment  */
+  height: auto;
+  padding-top: 5px;
+}
 
+/*  ------------------------------------------------------------- */
+/*    <div class="topic-container">       */
+/*      <div class="topic-item">Topics of Discussion</div>        */
+/*      <div class="topic-item">X</div>   */
+/*      <div class="topic-item">X</div>   */
+/*      <div class="topic-item">          */
+/*        <a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">New Topic</a>   */
+/*      </div>    */
+/*    </div>      */
+
+.topic-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.topic-item {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+
+  height: 60px;
+  width: 200px;
+
+  line-height: 40px;
+
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: left;
+}
+
+.channel-container { /* this container holds 3 items each with own format */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.channel-item1 {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+
+  height: 60px;
+  width: 200px;
+
+  line-height: 40px;
+
+  font-weight: bold;
+  font-size: 1.5em;
+  /*  color: #202020;  item is a link, this color won't apply */
+  text-align: left;
+}
+
+.channel-item2 {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+
+  height: 60px;
+  width: 200px;
+
+  line-height: 40px;
+
+  font-weight: bold;
+  font-size: .9em;
+  color: #202020;
+  text-align: left;
+}
+
+.channel-item3 {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+
+  height: 60px;
+  width: 200px;
+
+  line-height: 40px;
+
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: left;
+}
+
+.divider-container { /* button won't push below channel content */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.divider-item {
+  /* background: tomato; */
+  padding: 5px;
+  margin-top: 5px;
+
+  height: 60px;
+  width: 200px;
+
+  line-height: 40px;
+
+  /*    font-weight: bold;  */
+  /*    font-size: 1.5em;   */
+  /*    color: #202020;     */
+  /*    text-align: left;   */
+}
+
+/* -----------------------------------------------------------  */
+/* -----------------------------------------------------------  */
+/* -----------------------------------------------------------  */
+
+/*  FORMS                     FORMS                      FORMS  */
+/*  FORMS                     FORMS                      FORMS  */
 /* this affects form for session log-in and box border   */
 
 input, textarea, select, .uneditable-input {
@@ -227,9 +398,13 @@ input {
   height: auto !important;
 }
 
-/*  FORMS                 END                      FORMS  */
+/*  FORMS                     FORMS                      FORMS  */
+/*  FORMS                     FORMS                      FORMS  */
+/*  FORMS                     END                        FORMS  */
 
-/*  FORMS   the item below is for simple form     FORMS  */
+
+/* FORMS       FORMS       SIMPLE FORM      FORMS        FORMS  */
+/* FORMS    the item below is for simple form            FORMS  */
 /*  see the create user form at users/_form.html.erb     */
 
 .create {
@@ -255,5 +430,6 @@ input {
     top: 1px;
 }
 
-/*  FORMS   simple form see above items           FORMS  */
-/*  see the create user form at users/_form.html.erb     */
+/*  FORMS          simple form see ABOVE items           FORMS  */
+/*  see the create user form at users/_form.html.erb            */
+/* FORMS       FORMS       SIMPLE FORM      FORMS        FORMS  */

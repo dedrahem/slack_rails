@@ -1,21 +1,66 @@
 <!-- <o%o= link_to 'My Channels', teams_path, id:  "alink"%></aoo -->
-<p>teams/root/show.html.erb</p>
-<h2>text here</h2>
-<!-- a little button for return to channels page -->
-<a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
-<p class="two">#Channel for: <%=@team.name %></p>
-<p><%= @team.description %></p>
 
-<h3>Discussions</h3>
-<h3><%= @team.id %></h3>
+<div class="teambanner">
+  <p class="two">
+    #Channel <%= @team.id %> : <%=@team.name %>
+  </p>
+  <p> <%=@team.description%> </p>
+</div> <!-- close the page top division, teambanner -->
+
+
+<!-- - - - - - -      topics div    - - - - - - - -   -->
+
+<div class="topic-container">       <!-- topics div container       -->
+  <div class="topic-item">Discussion Topic</div>
+  <div class="topic-item"></div>
+  <div class="topic-item">
+    <a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">New Topic</a>
+  </div>
+</div>                              <!-- close topics div container  -->
+
+
+  <!--             <ul class="flex-container">        -->
+  <!--               <li class="flex-item">1</li>     -->
+  <!--               <li class="flex-item">2</li>     -->
+  <!--               <li class="flex-item">3</li>     -->
+  <!--               <li class="flex-item">4</li>     -->
+  <!--               <li class="flex-item">5</li>     -->
+  <!--               <li class="flex-item">6</li>     -->
+  <!--             </ul>                              -->
+
+<!--  topic button gave me a lot of trouble with putting that id in there -->
+<!--   bascially being talent impaired, yes i know.                       -->
 <!-- %x=x link_to "Create New Discussion: ", new_channel_path(@team.id)%><x%x=@team.namex% -->
 <!-- <a href="/teams/4/channels/new" see the ruby added to output the id number -->
-<a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">New Discussion</a>
+<!-- - - - - - - - - - - - close topics div - - - - - - - -   -->
+<!-- - - - - - - - - - - - close topics div - - - - - - - -   -->
+
+<!--       <hx><%="ref text"%></hx>   -->
 
 <% @channels.each do |channel| %>
-  <div class="channel">
-    <p><%= link_to channel.name, channel_path(channel.id) %></p>
-    <p><%= channel.description %></p>
-    <p><%= pluralize(channel.users.count, 'User') %></p>
-  </div>
+  <div class="channel-container">
+    <div class="channel-item1">
+      <p><%= link_to channel.name, channel_path(channel.id) %></p>
+    </div>
+    <div class="channel-item2">
+      <p><%= channel.description %></p>
+    </div>
+    <div class="channel-item3">
+      <%= pluralize(channel.users.count, 'User') %>
+    </div>
+  </div> <!-- CLOSE channel-container -->
 <% end %>
+
+<div class="divider-container">
+  <div class="divider-item"></div>
+</div>
+
+<!-- this provides a little button for return to channels page -->
+<div class="channel-container">
+  <div class="channel-item4">
+    <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
+  </div>
+  <div class="channel-item5">
+    <p>teams/root/show.html.erb</p>
+  </div>
+</div>
