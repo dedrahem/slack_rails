@@ -1,32 +1,19 @@
 <!-- <o%o= link_to 'My Channels', teams_path, id:  "alink"%></aoo -->
 
 <div class="teambanner">
-  <p class="two">
-    #Channel <%= @team.id %> : <%=@team.name %>
-  </p>
-  <p> <%=@team.description%> </p>
+  <p class="two">#Channel <%= @team.id %> : <%=@team.name %></p>
+  <p class="three"> <%=@team.description%> </p>
 </div> <!-- close the page top division, teambanner -->
 
 
 <!-- - - - - - -      topics div    - - - - - - - -   -->
 
 <div class="topic-container">       <!-- topics div container       -->
-  <div class="topic-item">Discussion Topic</div>
-  <div class="topic-item"></div>
-  <div class="topic-item">
+  <div class="topic-item1">Discussion Topic</div>
+  <div class="topic-item3">
     <a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">New Topic</a>
   </div>
 </div>                              <!-- close topics div container  -->
-
-
-  <!--             <ul class="flex-container">        -->
-  <!--               <li class="flex-item">1</li>     -->
-  <!--               <li class="flex-item">2</li>     -->
-  <!--               <li class="flex-item">3</li>     -->
-  <!--               <li class="flex-item">4</li>     -->
-  <!--               <li class="flex-item">5</li>     -->
-  <!--               <li class="flex-item">6</li>     -->
-  <!--             </ul>                              -->
 
 <!--  topic button gave me a lot of trouble with putting that id in there -->
 <!--   bascially being talent impaired, yes i know.                       -->
@@ -35,32 +22,37 @@
 <!-- - - - - - - - - - - - close topics div - - - - - - - -   -->
 <!-- - - - - - - - - - - - close topics div - - - - - - - -   -->
 
-<!--       <hx><%="ref text"%></hx>   -->
+<!--                  <hx><%="ref text"%></hx>                -->
+
+<!--  THIS SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
 
 <% @channels.each do |channel| %>
-  <div class="channel-container">
+  <div class="channel-container">  <!-- channel-container forms the table -->
     <div class="channel-item1">
-      <p><%= link_to channel.name, channel_path(channel.id) %></p>
+      <!-- a ><x%x= link_to channel.name, channel_path(channel.id) % >< x/a -->
+      <a><%= link_to channel.name, channel_path(channel.id), id: "topic-link" %></a>
     </div>
+
     <div class="channel-item2">
       <p><%= channel.description %></p>
     </div>
+
     <div class="channel-item3">
       <%= pluralize(channel.users.count, 'User') %>
     </div>
-  </div> <!-- CLOSE channel-container -->
+
+  </div>                            <!-- channel-container forms the table -->
+  <!-- div class="channel-void"  /div spacer between rows -->
 <% end %>
 
-<div class="divider-container">
-  <div class="divider-item"></div>
-</div>
+<!--  ABOVE SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
 
 <!-- this provides a little button for return to channels page -->
-<div class="channel-container">
+<div class="button-container">       <!-- container for button and location -->
   <div class="channel-item4">
     <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
   </div>
   <div class="channel-item5">
-    <p>teams/root/show.html.erb</p>
+    <p class="four">teams/root/show.html.erb</p>   <!-- container for button and location -->
   </div>
 </div>

@@ -69,6 +69,7 @@ textarea {
 /*        the dot in .center indicaters the rule          */
 /*        will style a class   - JUMBOTRON                */
 /* jumbotron AND .center found in sessions/new.html.erb   */
+
 .center {
   text-align: left;
   h1 {
@@ -144,12 +145,34 @@ p.one {
 /*   < < < < < <    p.two   > > > > > > > > > > > */
 /*   < < < <   teams/root/show.html.erb  > > > >  */
 p.two {
-  font-size: 1.4em;
-  line-height: 1.5em;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.7em;
   color: #000000;
+  padding: 8px 0px 2px 0px;
 }
 /*    < < < < < <   p.two   > > > > > > > > */
 /*    < < < < < <   p.two   > > > > > > > > */
+
+/*    < < < < < <   p.three   > > > > > > > > */
+p.three {
+  font-size: 1.2em;
+  line-height: 1.7em;
+  font-weight: bold;
+  color: #000000;
+  padding: 1px 0px 1px 0px;
+}
+/*    < < < < < <   p.three   > > > > > > > > */
+
+/*    < < < < < <   p.four  > > > > > > > > */
+p.four {
+  font-size: .8em;
+  line-height: 1.7em;
+  font-weight: normal;
+  color: #000000;
+  padding: 1px 0px 1px 0px;
+}
+/*    < < < < < <   p.four   > > > > > > > > */
 
 .mychanls {   /*    see teams/root/index.html.erb  2 places  */
     display: inline-block;
@@ -186,7 +209,7 @@ p.two {
   }
 
   #globlinktwo {
-    color: #3379b7;
+    color: #3379b7; /* blue similar to this link but darker */
     font-size: 1.3em;
     line-height: 1.7em;
     &:hover{
@@ -250,106 +273,185 @@ p.two {
 /*      </div>    */
 /*    </div>      */
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/*   This is styling for THE TABLE OUTPUT arrangement or the DO  */
+/*   used in teams/root/show.html.erb                            */
 .topic-container {
   padding: 0;
   margin: 0;
   list-style: none;
-
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
 
-.topic-item {
+.topic-item1 {
   /* background: tomato; */
 
   padding: 5px;
   margin-top: 5px;
-
-  height: 60px;
-  width: 200px;
-
+  height: auto;
+  width: 50%;
   line-height: 40px;
-
   font-weight: bold;
   font-size: 1.5em;
   color: #202020;
   text-align: left;
 }
+
+.topic-item2 {
+  /* background: tomato; */
+  padding: 5px;
+  margin-top: 5px;
+  height: auto;
+  width: 200px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: center;
+}
+
+.topic-item3 {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+  height: auto;
+  width: 50%;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: right;
+}
+/*   THE TABLE DO OUTPUT                                      */
+/*   used in teams/root/show.html.erb                         */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+/*		CENTERING VERTICALLY 						                         */
+/*		6 Methods For Vertical Centering With CSS			           */
+/*		http://vanseodesign.com/css/vertical-centering/		       */
+/*		Equal Top and Bottom Padding					                   */
+/*													                                   */
+/*	html												                               */
+/*			<div id="parent">							                         */
+/*	 		<div id="child">Content here</div>			               */
+/*			</div>									                               */
+/*													                                   */
+/*													                                   */
+/*	css												                                 */
+/*			#parent {									                             */
+/*	    			padding: 5% 0;  						                     */
+/*			}  										                                 */
+/*													                                   */
+/*			#child {    								                           */
+/*				padding: 10% 0;   						                       */
+/*			}										                                   */
+/*													                                   */
 
 .channel-container { /* this container holds 3 items each with own format */
   padding: 0;
   margin: 0;
   list-style: none;
-
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
 
+/*  The margin-top CSS property of an element sets the margin           */
+/*  space required on the top of an element. A negative value           */
+/*  is also allowed. */
+/*  https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top#Values  */
+
+
+/* - - - - - - - -   CONTAINER see view, teams/root/show.html.erb    */
+
 .channel-item1 {
-  /* background: tomato; */
-
-  padding: 5px;
-  margin-top: 5px;
-
-  height: 60px;
-  width: 200px;
-
-  line-height: 40px;
-
+  background: yellow;
+  padding: 0px 0px 0px 0px;
+  margin-top: 0px;
+  height: auto;
+  width: 20%;
   font-weight: bold;
-  font-size: 1.5em;
-  /*  color: #202020;  item is a link, this color won't apply */
-  text-align: left;
-}
+  text-align: center;
+  align-content: center;
+  }
+
+/* this is confusing, the relation between a link style           */
+/*         and that of the container the anchor tag is within     */
+/* see teams/root/show.html.erb , NESTED HOVER for a tag          */
+/* see teams/root/show.html.erb , NESTED HOVER for a tag          */
+/* this formats the link in the feaux table DO for the page       */
+/*    TOPIC LINK IS USED                                          */
+/*      div class="channel-item1"                                 */
+/*         <a><x%x= link_to channel.name,                         */
+/*            channel_path(channel.id), id: "topic-link" %x></a>  */
+/*       /div                                                     */
+
+  #topic-link {
+    color: #393a3b; /* a  grey */
+    font-size: 1.1em;
+    line-height: 1.7em;
+    &:hover{
+      color: #202020;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+/* - - - - - - - -   CONTAINER see view, teams/root/show.html.erb    */
+
+/*  The line-height property defines the amount of space above      */
+/*  and below inline elements. That is, elements that are set to    */
+/*  display: inline or display: inline-block. This property is      */
+/*  most often used to set the leading for lines of text.           */
 
 .channel-item2 {
   /* background: tomato; */
-
-  padding: 5px;
-  margin-top: 5px;
-
-  height: 60px;
-  width: 200px;
-
-  line-height: 40px;
-
+  align-items:center;
+  background: green;
+  padding: 0px 0px 0px 0px;
+  margin-top: 0px;
+  height: auto;
+  width: 70%;
+  line-height: 18px;
   font-weight: bold;
-  font-size: .9em;
+  font-size: 14px;
   color: #202020;
-  text-align: left;
+  text-align: center;
 }
 
 .channel-item3 {
   /* background: tomato; */
-
-  padding: 5px;
-  margin-top: 5px;
-
-  height: 60px;
-  width: 200px;
-
-  line-height: 40px;
-
+  background: orange;
+  padding: 0px 0px 0px 0px;
+  margin-top: 0px;
+  height: auto;
+  width: 10%;
+  line-height: 20px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: .9em;
   color: #202020;
-  text-align: left;
+  text-align: center;
+  align-items: center;
 }
+/*          END OF TABLE DO OUTPUT                                */
+/*   The above styles THE TABLE OUTPUT arrangement or the DO      */
+/*   used in teams/root/show.html.erb                             */
 
-.divider-container { /* button won't push below channel content */
-  padding: 0;
+/*   page final row content of back to my channels button         */
+/*   and you are here disclaimer used in teams/root/show.html.erb */
+
+.button-container {
+  padding: 10px 0px 5px 0px;
   margin: 0;
   list-style: none;
 
@@ -363,22 +465,36 @@ p.two {
   justify-content: space-around;
 }
 
-.divider-item {
-  /* background: tomato; */
-  padding: 5px;
-  margin-top: 5px;
+.channel-item4 {
+    /* background: tomato; */
+    padding: 5px;
+    margin-top: 5px;
 
-  height: 60px;
-  width: 200px;
+    height: auto;
+    width: 50%;
 
-  line-height: 40px;
+    line-height: 40px;
 
-  /*    font-weight: bold;  */
-  /*    font-size: 1.5em;   */
-  /*    color: #202020;     */
-  /*    text-align: left;   */
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #202020;
+    text-align: left;
 }
 
+.channel-item5 {
+    padding: 20px 0px 0px 0px;
+    margin-top: 5px;
+    height: auto;
+    width: 50%;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: .8em;
+    color: #202020;
+    text-align: right;
+  }
+
+  /*   page final row content of back to my channels button         */
+  /*   and you are here disclaimer used in teams/root/show.html.erb */
 /* -----------------------------------------------------------  */
 /* -----------------------------------------------------------  */
 /* -----------------------------------------------------------  */
@@ -405,7 +521,7 @@ input {
 
 /* FORMS       FORMS       SIMPLE FORM      FORMS        FORMS  */
 /* FORMS    the item below is for simple form            FORMS  */
-/*  see the create user form at users/_form.html.erb     */
+/*  see the create user form at users/_form.html.erb            */
 
 .create {
     background-color: #ff6d1f;  /* button fill */
