@@ -1,7 +1,7 @@
 <!-- <o%o= link_to 'My Channels', teams_path, id:  "alink"%></aoo -->
 
 <div class="teambanner">
-  <p class="two">#Channel <%= @team.id %> : <%=@team.name %></p>
+  <p class="two">#Channel<%= @team.id %> : <%=@team.name %></p>
   <p class="three"> <%=@team.description%> </p>
 </div> <!-- close the page top division, teambanner -->
 
@@ -33,7 +33,7 @@
 <% puts " "%>
 
 <% @channels.each do |channel| %>
-<% if bgcolor 
+<!-- if bgcolor -->
   <div class="channel-container">  <!-- channel-container forms the table -->
 
     <div class="channel-item1">
