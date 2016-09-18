@@ -25,27 +25,43 @@
 <!--                  <hx><%="ref text"%></hx>                -->
 
 <!--  THIS SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
+<% bgcolor = 1 %>
+<% puts " "%>
+<% puts " "%>
+<% puts " bgcolor index number is set = : #{bgcolor}"%>
+<% puts " "%>
+<% puts " "%>
 
 <% @channels.each do |channel| %>
+<% if bgcolor 
   <div class="channel-container">  <!-- channel-container forms the table -->
+
     <div class="channel-item1">
-      <!-- a ><x%x= link_to channel.name, channel_path(channel.id) % >< x/a -->
-      <a><%= link_to channel.name, channel_path(channel.id), id: "topic-link" %></a>
-    </div>
+      <div class="child-item1">
+        <!--  p>test</p  -->
+        <a><%= link_to channel.name, channel_path(channel.id), id: "topic-link" %></a>
+      </div>  <!-- close the child div -->
+    </div>    <!-- close the parent -->
 
     <div class="channel-item2">
-      <p><%= channel.description %></p>
-    </div>
+      <div class="child-item2">
+        <%= channel.description %>
+        <!-- p>test</p -->
+      </div> <!-- close the child div -->
+    </div> <!-- close the parent div  -->
 
     <div class="channel-item3">
-      <%= pluralize(channel.users.count, 'User') %>
-    </div>
+      <div class="child-item3">
+        <%= pluralize(channel.users.count, 'User') %>
+        <!--   p>test</p  -->
+      </div>  <!-- close the child div    -->
+    </div>    <!-- close the parent       -->
 
   </div>                            <!-- channel-container forms the table -->
-  <!-- div class="channel-void"  /div spacer between rows -->
-<% end %>
+  <!-- the channel-container, the row, is contained in the DO LOOP -->
+<% end %>  <!-- END the DO -->
 
-<!--  ABOVE SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
+<!--  ABOVE SECTION FORMS THE DO OUTPUT TABLE    END TABLE -->
 
 <!-- this provides a little button for return to channels page -->
 <div class="button-container">       <!-- container for button and location -->
@@ -53,6 +69,6 @@
     <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
   </div>
   <div class="channel-item5">
-    <p class="four">teams/root/show.html.erb</p>   <!-- container for button and location -->
+    <p class="four">teams/root/show.html.erb</p>   <!-- YOU ARE HERE -->
   </div>
 </div>

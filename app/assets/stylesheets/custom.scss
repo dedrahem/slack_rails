@@ -1,5 +1,13 @@
+/*  - - - - - - - - - - - - - - */
+/*  - - - - - - - - - - - - - - */
+/*                              */
+/*     DEEP PURPLE              */
+/*                              */
+/*     Machine Head             */
+/*                              */
+/*  - - - - - - - - - - - - - - */
+/*  - - - - - - - - - - - - - - */
 /*                                          custom.css.scss         */
-
 /* DEPRECATION WARNING: Extra .css in SCSS file is unnecessary.     */
 /*  Rename /Users/douglasdrahem/MyProjects/slack_rails/app/assets/  */
 /*  stylesheets/custom.css.scss to /Users/douglasdrahem/MyProjects/ */
@@ -174,6 +182,15 @@ p.four {
 }
 /*    < < < < < <   p.four   > > > > > > > > */
 
+/*    < < < < < <   p.five  > > > > > > > > */
+/*    p.five {                              */
+/*      font-size: .8em;                    */
+/*      line-height: 1.7em;                 */
+/*      font-weight: normal;                */
+/*      color: #000000;                     */
+/*    }                                     */
+/*    < < < < < <   p.five   > > > > > >  > */
+
 .mychanls {   /*    see teams/root/index.html.erb  2 places  */
     display: inline-block;
     color: #167f83; /*  slack green */
@@ -329,10 +346,11 @@ p.four {
   color: #202020;
   text-align: right;
 }
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /*   THE TABLE DO OUTPUT                                      */
 /*   used in teams/root/show.html.erb                         */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-
+/*                                                            */
 /*		CENTERING VERTICALLY 						                         */
 /*		6 Methods For Vertical Centering With CSS			           */
 /*		http://vanseodesign.com/css/vertical-centering/		       */
@@ -353,10 +371,15 @@ p.four {
 /*				padding: 10% 0;   						                       */
 /*			}										                                   */
 /*													                                   */
-
-.channel-container { /* this container holds 3 items each with own format */
+/* EACH TIME THRU THE DO LOOP YOU MAKE A NEW ROW CONTAINER     */
+/* this container holds 3 PARENT items, it is THE ROW          */
+.channel-container {
+  background: yellow;
   padding: 0;
   margin: 0;
+  /* border: 1px 0px 1px 0px;  added for ref only */
+  /* border-color: #0000aa;    added for ref only */
+  /* border-style: dashed;     added for ref only */
   list-style: none;
   display: -webkit-box;
   display: -moz-box;
@@ -364,28 +387,38 @@ p.four {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
+  flex-direction: row;
   justify-content: space-around;
+  height: auto;
 }
 
 /*  The margin-top CSS property of an element sets the margin           */
 /*  space required on the top of an element. A negative value           */
-/*  is also allowed. */
+/*  is also allowed.                                                    */
 /*  https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top#Values  */
-
-
-/* - - - - - - - -   CONTAINER see view, teams/root/show.html.erb    */
-
+/*                                                                      */
+/* - - - - - - - -   CONTAINER see view, teams/root/show.html.erb       */
+/*                                                                      */
 .channel-item1 {
-  background: yellow;
-  padding: 0px 0px 0px 0px;
+  display: flex;            /* added */
+  flex-direction: column;   /* added */
+  /* border: 1px 0px 1px 0px; */
+  /* border-color: #0020aa;   */
+  /* border-style: solid;     */
+  /* background: yellow;      */
+  padding: 5% 0px 5% 0px;
   margin-top: 0px;
-  height: auto;
-  width: 20%;
+  height: auto;             /* set to auto, was 100% */
+  width: 25%;
+  line-height: 18px;
   font-weight: bold;
+  font-size: 14px;
+  color: #2020202;
   text-align: center;
-  align-content: center;
+  justify-content: center;  /* changed was align-content, center */
+  overflow: hidden;
   }
-
+/*                                                                */
 /* this is confusing, the relation between a link style           */
 /*         and that of the container the anchor tag is within     */
 /* see teams/root/show.html.erb , NESTED HOVER for a tag          */
@@ -396,9 +429,15 @@ p.four {
 /*         <a><x%x= link_to channel.name,                         */
 /*            channel_path(channel.id), id: "topic-link" %x></a>  */
 /*       /div                                                     */
+.child-item1 {
+  padding: 5% 0px 5% 0px;
+  /*   border: 1px 0px 1px 0px;     */
+  /*   border-color: #990000;      */
+  /*   border-style: solid;       */
+}
 
   #topic-link {
-    color: #393a3b; /* a  grey */
+    color: #393a3b; /* an alien grey */
     font-size: 1.1em;
     line-height: 1.7em;
     &:hover{
@@ -415,40 +454,68 @@ p.four {
 /*  most often used to set the leading for lines of text.           */
 
 .channel-item2 {
-  /* background: tomato; */
-  align-items:center;
-  background: green;
-  padding: 0px 0px 0px 0px;
+  display: flex;            /* added  */
+  flex-direction: column;   /* added */
+  /*   border: 1px 0px 1px 0px;     */
+  /*   border-color: #202020;      */
+  /*   border-style: solid;       */
+  /*   background: green;        */
+  padding: 5% 0px 5% 0px;
   margin-top: 0px;
-  height: auto;
-  width: 70%;
+  height: auto;             /* set to auto, was 100% */
+  width: 55%;
   line-height: 18px;
   font-weight: bold;
   font-size: 14px;
   color: #202020;
   text-align: center;
+  justify-content: center;  /* changed was align-content, center */
+}
+
+.child-item2 {
+  padding: 5% 0px 5% 0px;
+  /*   border: 1px 0px 1px 0px; */
+  /*   border-color: #990000;  */
+  /*   border-style: solid;   */
 }
 
 .channel-item3 {
-  /* background: tomato; */
-  background: orange;
-  padding: 0px 0px 0px 0px;
+  display: flex;            /* added  */
+  flex-direction: column;   /* added */
+  /*  border: 1px 0px 1px 0px;      */
+  /*  border-color: #202020;       */
+  /*  border-style: solid;        */
+  /*  background: orange;        */
+  padding: 5% 0px 5% 0px;
   margin-top: 0px;
-  height: auto;
-  width: 10%;
-  line-height: 20px;
+  height: auto;             /* set to auto, was 100% */
+  width: 20%;
+  line-height: 18px;
   font-weight: bold;
-  font-size: .9em;
+  font-size: 13px;          /* changed from an em to 14px */
   color: #202020;
   text-align: center;
-  align-items: center;
+  justify-content: center;  /* changed was align-content, center */
+  overflow: hidden;
 }
+
+.child-item3 {
+  padding: 5% 0px 5% 0px;
+  /* border: 1px 0px 1px 0px; */
+  /* border-color: #00ff00;   */
+  /* border-style: solid;     */
+}
+
 /*          END OF TABLE DO OUTPUT                                */
 /*   The above styles THE TABLE OUTPUT arrangement or the DO      */
 /*   used in teams/root/show.html.erb                             */
 
 /*   page final row content of back to my channels button         */
 /*   and you are here disclaimer used in teams/root/show.html.erb */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+
 
 .button-container {
   padding: 10px 0px 5px 0px;
