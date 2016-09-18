@@ -25,15 +25,29 @@
 <!--                  <hx><%="ref text"%></hx>                -->
 
 <!--  THIS SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
-<% bgcolor = 1 %>
+<% rowcolor = 0 %>
 <% puts " "%>
 <% puts " "%>
-<% puts " bgcolor index number is set = : #{bgcolor}"%>
+<% puts " rowcolor index number is set = : #{rowcolor}"%>
+<% puts " "%>
+<% puts " "%>
+<% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
 <% puts " "%>
 <% puts " "%>
 
-<% @channels.each do |channel| %>
-<!-- if bgcolor -->
+
+<% rowcolor = 1 %>                <!-- row color flag is ODD -->
+<% @channels.each do |channel| %>  <!-- BEGIN THE DO CONTAINER -->
+<% puts " rowcolor index number is set = : #{rowcolor}"%>
+  <% if rowcolor.even? %>
+    <div id="noshade">
+      <% puts "even"%>
+  <% else %>
+    <div id="shade">
+      <% puts "odd"%>
+  <% end %>   <!-- END THE IF here or down there  -->
+
+  <!-- THE CHANNEL CONTAINER IS THE ROW -->
   <div class="channel-container">  <!-- channel-container forms the table -->
 
     <div class="channel-item1">
@@ -57,10 +71,24 @@
       </div>  <!-- close the child div    -->
     </div>    <!-- close the parent       -->
 
-  </div>                            <!-- channel-container forms the table -->
+  </div>      <!-- CLOSE channel-container - forms the table -->
   <!-- the channel-container, the row, is contained in the DO LOOP -->
-<% end %>  <!-- END the DO -->
 
+  </div>    <!-- the if DIVs -->
+  </div>    <!-- the if DIVs -->
+  <!-- x% end %x END THE IF HERE ????  or up there   -->
+
+  <% rowcolor = rowcolor + 1 %>
+  <% puts " "%>
+  <% puts " "%>
+  <% puts " rowcolor index number is set = : #{rowcolor}"%>
+  <% puts " "%>
+  <% puts " "%>
+  <% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
+  <% puts " "%>
+  <% puts " "%>
+
+<% end %>   <!-- END the DO -->
 <!--  ABOVE SECTION FORMS THE DO OUTPUT TABLE    END TABLE -->
 
 <!-- this provides a little button for return to channels page -->

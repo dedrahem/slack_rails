@@ -373,6 +373,7 @@ p.four {
 /*													                                   */
 /* EACH TIME THRU THE DO LOOP YOU MAKE A NEW ROW CONTAINER     */
 /* this container holds 3 PARENT items, it is THE ROW          */
+#shade {
 .channel-container {
   background: yellow;
   padding: 5px 0px 5px 0px;
@@ -390,7 +391,29 @@ p.four {
   flex-direction: row;
   justify-content: space-around;
   height: auto;
-}
+}   /* close the class channel-container */
+} /* close the # shade id */
+
+#noshade {
+.channel-container {
+  background: blue;
+  padding: 5px 0px 5px 0px;
+  margin: 0;
+  /* border: 1px 0px 1px 0px;  added for ref only */
+  /* border-color: #0000aa;    added for ref only */
+  /* border-style: dashed;     added for ref only */
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  height: auto;
+}   /* close the class channel-container */
+} /* close the # noshade id */
 
 /*  The margin-top CSS property of an element sets the margin           */
 /*  space required on the top of an element. A negative value           */
