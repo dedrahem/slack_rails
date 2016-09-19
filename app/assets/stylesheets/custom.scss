@@ -25,6 +25,29 @@
 /* tag, bootstrap will stick the navigation menu to     */
 /* pagetop. top padding will then push the page down    */
 
+
+/*    THE TROUBLE WITH BACKGROUND IMAGES                */
+/*      don't be an island                              */
+
+/*    body {                                          */
+/*          background: linear-gradient(              */
+/*            rgba(0,0,0, 0.3),rgba(0,0,0, 0.3) ),    */
+/*             url("/assets/yourimage.jpg") no-repeat center center fixed;  */
+/*          -webkit-backgroud-size: cover;            */
+/*          -moz-background-size: cover;              */
+/*          -o-background-size: cover;                */
+/*          background-size: cover;                   */
+/*        }                                           */
+/*                                                    */
+/*  The "linear-gradient( rgba(0,0,0, 0.3), rgba(0,0,0, 0.3))"    */
+/*  allows for a dark tint on an image that you use but is too    */
+/*  bright, so will provide contrast.  Choose an image you want   */
+/*  and the included code should work, maybe.                     */
+
+
+/*                        BODY STYLING                    */
+/*                        BODY STYLING                    */
+/*                        BODY STYLING                    */
 /*                        BODY STYLING                    */
 
 body {
@@ -262,13 +285,28 @@ p.four {
 
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*  - -                                             - -  */
+/*      styling for teams/root/show.html.erb  w/flex     */
+/*  - -                                              - - */
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/*  styling for teams/root/show.html.erb  w/flex         */
 /*  - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* align-content: flex-start | flex-end | center |       */
 /* space-between | space-around | stretch                */
 /* !!! align-content has no effect when there is only  !!*/
 /* !!! one line of flex items.                         !!*/
+
+
+/* attempt to background this page only with a shade    */
+/* and then perhaps an image, walk before run           */
+.container-bg {
+  /* background: linear-gradient(rgba(0,0,0, 0.1),rgba(0,0,0, 0.1)), */
+  /*            url("/assets/sprites.jpg") no-repeat center center fixed; */
+  background: linear-gradient(rgba(0,0,0, 0.1),rgba(0,0,0, 0.5)),no-repeat center center fixed;
+  -webkit-backgroud-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
 
 .teambanner {       /* teams/root/show.html.erb */
   display: flex;
@@ -348,6 +386,8 @@ p.four {
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /*   THE TABLE DO OUTPUT                                      */
 /*   used in teams/root/show.html.erb                         */
 /*                                                            */
@@ -393,7 +433,8 @@ p.four {
   background-color: #d4d4d4;
   @include channel-container;
 }
-
+/* - - - - - - - - - - - - - -         WOW                   -*/
+/* - - - - - - - - - - - - - -                               -*/
 #noshade {
   background-color: #ededed;
   @include channel-container;
@@ -404,8 +445,8 @@ p.four {
 /*         both an ID and a Class on a single element.  */
 /*         In fact, it is often a very sensuous idea.   */
 /* EXAMPLE:      <li id="comment-27299" class="item">   */
-
-
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 /*  The margin-top CSS property of an element sets the margin           */
 /*  space required on the top of an element. A negative value           */
 /*  is also allowed.                                                    */
@@ -413,6 +454,10 @@ p.four {
 /*                                                                      */
 /* - - - - - - - -   CONTAINER see view, teams/root/show.html.erb       */
 /*                                                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 .channel-item1 {
   display: flex;            /* added */
   flex-direction: column;   /* added */

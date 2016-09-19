@@ -2,10 +2,20 @@ class Teams::RootController < ApplicationController
   before_action :require_login
 
   def index
+    puts " "
+    puts " "
+    puts "you are here : teams/root/index.html.erb via layouts/application"
+    puts " "
+    puts " "
     @teams = @current_user.teams
   end
 
   def show
+    puts " "
+    puts " "
+    puts "you are here : teams/root_controller.rb/#show "
+    puts "aka : teams/root/show.html.erb within layouts/application "
+    puts " "
     @team = Team.find(params[:id])
     @channels = @current_user.channels.by_team(@team)
   end
