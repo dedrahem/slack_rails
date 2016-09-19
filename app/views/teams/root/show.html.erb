@@ -35,21 +35,28 @@
 <% puts " "%>
 <% puts " "%>
 
-
-<% rowcolor = 1 %>                <!-- row color flag is ODD -->
+<% rowid = "void" %>    <!-- introduce the variable sort of -->
+<% rowcolor = 1 %>                <!-- row color's flag is ODD -->
 <% @channels.each do |channel| %>  <!-- BEGIN THE DO CONTAINER -->
 <% puts " rowcolor index number is set = : #{rowcolor}"%>
   <% if rowcolor.even? %>
-    <div id="noshade">
-      <% puts "even"%>
+      <!--  div id="noshade">  The noshade IF DIV -->
+      <% rowid = "noshade" %>
+      <% puts "even" %>  <!-- Select #style what doesn't shade row -->
   <% else %>
-    <div id="shade">
-      <% puts "odd"%>
-  <% end %>   <!-- END THE IF here or down there  -->
+      <!--    div id="shade">   the shade IF DIV -->
+      <% rowid = "shade" %>
+      <% puts "odd" %>  <!-- Style will shade ODD rows -->
+  <% end %>   <!-- END THE IF here or down there  ???  -->
 
-  <!-- THE CHANNEL CONTAINER IS THE ROW -->
-  <div class="channel-container">  <!-- channel-container forms the table -->
-
+  <!--       THE CHANNEL CONTAINER IS THE ROW      -->
+<% puts " "%>
+<% puts " "%>
+<% puts " THE rowid is now equiv to : #{rowid}"%>
+<% puts " "%>
+<% puts " "%>
+  <div id="<%= rowid %>" >  <!-- channel-container DO forms the table -->
+  <!-- div class="channel-container"  currently defeated  -->
     <div class="channel-item1">
       <div class="child-item1">
         <!--  p>test</p  -->
@@ -74,10 +81,14 @@
   </div>      <!-- CLOSE channel-container - forms the table -->
   <!-- the channel-container, the row, is contained in the DO LOOP -->
 
-  </div>    <!-- the if DIVs -->
-  </div>    <!-- the if DIVs -->
-  <!-- x% end %x END THE IF HERE ????  or up there   -->
+  <!--    /div>    close the shade  IF DIV  -->
+  <!--    /div>    close the noshade IF DIV -->
+  <!--    x% end %x  END THE IF HERE ? or up there ?  -->
+  <!--    THIS IS JUST TOO CLUMSY TO MAKE WORK  -->
 
+  <% puts " "%>
+  <% puts " "%>
+  <% puts " rowcolor index number is set = : #{rowcolor}"%>
   <% rowcolor = rowcolor + 1 %>
   <% puts " "%>
   <% puts " "%>
@@ -88,7 +99,8 @@
   <% puts " "%>
   <% puts " "%>
 
-<% end %>   <!-- END the DO -->
+<% end %>   <!-- END the DO the DO for table creation  -->
+
 <!--  ABOVE SECTION FORMS THE DO OUTPUT TABLE    END TABLE -->
 
 <!-- this provides a little button for return to channels page -->

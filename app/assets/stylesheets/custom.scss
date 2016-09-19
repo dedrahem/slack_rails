@@ -373,14 +373,10 @@ p.four {
 /*													                                   */
 /* EACH TIME THRU THE DO LOOP YOU MAKE A NEW ROW CONTAINER     */
 /* this container holds 3 PARENT items, it is THE ROW          */
-#shade {
-.channel-container {
-  background: yellow;
+
+@mixin channel-container {
   padding: 5px 0px 5px 0px;
   margin: 0;
-  /* border: 1px 0px 1px 0px;  added for ref only */
-  /* border-color: #0000aa;    added for ref only */
-  /* border-style: dashed;     added for ref only */
   list-style: none;
   display: -webkit-box;
   display: -moz-box;
@@ -392,28 +388,23 @@ p.four {
   justify-content: space-around;
   height: auto;
 }   /* close the class channel-container */
-} /* close the # shade id */
+
+#shade {
+  background-color: #d4d4d4;
+  @include channel-container;
+}
 
 #noshade {
-.channel-container {
-  background: blue;
-  padding: 5px 0px 5px 0px;
-  margin: 0;
-  /* border: 1px 0px 1px 0px;  added for ref only */
-  /* border-color: #0000aa;    added for ref only */
-  /* border-style: dashed;     added for ref only */
-  list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  height: auto;
-}   /* close the class channel-container */
-} /* close the # noshade id */
+  background-color: #ededed;
+  @include channel-container;
+}
+
+/*         Elements can have BOTH                       */
+/*         There is nothing stopping you from having    */
+/*         both an ID and a Class on a single element.  */
+/*         In fact, it is often a very sensuous idea.   */
+/* EXAMPLE:      <li id="comment-27299" class="item">   */
+
 
 /*  The margin-top CSS property of an element sets the margin           */
 /*  space required on the top of an element. A negative value           */
