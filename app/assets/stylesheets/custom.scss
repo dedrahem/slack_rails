@@ -158,6 +158,18 @@ h4 {
 }
 /* h4                                 h4               */
 
+/* h5                                h5                */
+/*        h5 is not used                  h5 not used  */
+h5 {
+  font-size: 8.3em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #880022;
+}
+/* h5 end                             h5 end          */
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -306,6 +318,7 @@ p.four {
   -moz-background-size: cover;
   -ms-background-size: cover;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .teambanner {       /* teams/root/show.html.erb */

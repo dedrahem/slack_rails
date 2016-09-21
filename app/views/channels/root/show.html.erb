@@ -1,11 +1,34 @@
-<p>views/channels/root/show.html</p>
-<p> this page needs a small button link back to channels</p>
+<div class="container-bg">  <!-- the outermost container -->
 
-<p>Team: <%= @team.name %></p>
+  <!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
+  <div class="teambanner">
+    <p class="two">Team: <%= @team.name %></p>
 
-<p><%= @channel.name %></p>
-<p><%= @channel.description %></p>
+    <p class = "three"><%= @channel.name %></p>
+    <p class = "four"><%= @channel.description %></p>
+  </div> <!-- close teambanner -->
+  <!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
 
-<h2>Messages</h2>
 
-<%= react_component 'MessagesContainer', { channelId: @channel.id } %>
+<div class="topic-container">       <!-- topics div container       -->
+  <div class="topic-item1">Messages</div>
+  <div class="topic-item3">
+    <%= react_component 'MessagesContainer', { channelId: @channel.id } %>
+  </div>
+</div>                              <!-- close topics div container  -->
+
+
+<!-- this provides a little button for return to channels page -->
+<div class="button-container">       <!-- container for button and location -->
+  <div class="channel-item4">
+    <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
+  </div>
+  <div class="channel-item5">
+    <p class="four">views/channels/root/show.html.erb</p>   <!-- YOU ARE HERE -->
+  </div>
+
+</div> <!-- close the button container directly above -->
+
+
+</div> <!-- close container bg -->
+<!-- x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x -->
