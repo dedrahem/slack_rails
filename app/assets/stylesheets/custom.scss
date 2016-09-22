@@ -218,13 +218,36 @@ p.four {
 /*    < < < < < <   p.four   > > > > > > > > */
 
 /*    < < < < < <   p.five  > > > > > > > > */
-/*    p.five {                              */
-/*      font-size: .8em;                    */
-/*      line-height: 1.7em;                 */
-/*      font-weight: normal;                */
-/*      color: #000000;                     */
-/*    }                                     */
+p.five {
+  font-size: 1em;
+  line-height: 1.7em;
+  font-weight: bold;
+  color: #000000;
+  padding: 1px 0px 1px 0px;
+}
 /*    < < < < < <   p.five   > > > > > >  > */
+
+/*    < < < < < <   p.six  > > > > > > > > */
+p.six {
+  font-size: .8em;
+  line-height: 1.7em;
+  font-weight: bold;
+  color: #000000;
+  padding: 1px 0px 1px 0px;
+}
+/*    < < < < < <   p.six   > > > > > >  > */
+
+.message {
+  font-size: .8em;
+  line-height: 1.7em;
+  font-weight: bold;
+  color: #000000;
+  padding: 1px 0px 1px 0px;
+}
+
+
+
+
 
 .mychanls {   /*    see teams/root/index.html.erb  2 places  */
     display: inline-block;
@@ -638,6 +661,37 @@ p.four {
 /* -----------------------------------------------------------  */
 /* -----------------------------------------------------------  */
 
+/* views/channels/root/show                                     */
+.channel-topic {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.topic-item4 {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+  height: auto;
+  width: auto;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: left;
+}
+
+
+
+
 /*  FORMS                     FORMS                      FORMS  */
 /*  FORMS                     FORMS                      FORMS  */
 /* this affects form for session log-in and box border   */
@@ -645,6 +699,7 @@ p.four {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbbbc5; /* darkens the gray of bbbbbb a bit */
   width: 100%;
+  border-radius: 5px;
   margin-bottom: 10px;
   @include box-sizing;
 }

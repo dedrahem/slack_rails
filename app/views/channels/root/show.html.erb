@@ -3,19 +3,21 @@
   <!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
   <div class="teambanner">
     <p class="two">Team: <%= @team.name %></p>
-
-    <p class = "three"><%= @channel.name %></p>
-    <p class = "four"><%= @channel.description %></p>
   </div> <!-- close teambanner -->
   <!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
 
-
-<div class="topic-container">       <!-- topics div container       -->
-  <div class="topic-item1">Messages</div>
-  <div class="topic-item3">
-    <%= react_component 'MessagesContainer', { channelId: @channel.id } %>
+<div class="channel-topic">       <!-- topics div container       -->
+  <div class="topic-item4">
+    <p class="five">Topic of Discussion : <%= @channel.name %> </p>
+    <p class="six"> <%= @channel.description %></p>
   </div>
+
 </div>                              <!-- close topics div container  -->
+
+<div class="topic-item4">
+  <p class="five">-Messages-</p>
+  <%= react_component 'MessagesContainer', { channelId: @channel.id } %>
+</div>
 
 
 <!-- this provides a little button for return to channels page -->
