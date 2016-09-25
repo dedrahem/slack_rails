@@ -274,6 +274,7 @@ p.six {
   padding-left: 4px;
 }
 /* a container to keep the button off the input box */
+/* this got wayyy out of hand                       */
 .dogbox {
   width: auto;
   height: auto;
@@ -398,7 +399,9 @@ p.six {
 /* !!! align-content has no effect when there is only  !!*/
 /* !!! one line of flex items.                         !!*/
 
-
+.container {
+  padding-bottom: 10px;
+}
 /* attempt to background this page only with a shade    */
 /* and then perhaps an image, walk before run           */
 .container-bg {
@@ -729,7 +732,7 @@ p.six {
 /* -----------------------------------------------------------  */
 /* -----------------------------------------------------------  */
 
-/* views/channels/root/show                                     */
+/* views/channels/root/show            views/channels/root/show */
 .channel-topic {
   padding: 0;
   margin: 0;
@@ -757,9 +760,6 @@ p.six {
   text-align: left;
 }
 
-
-
-
 /*  FORMS                     FORMS                      FORMS  */
 /*  FORMS                     FORMS                      FORMS  */
 /* this affects form for session log-in and box border   */
@@ -784,6 +784,47 @@ input {
 /* FORMS       FORMS       SIMPLE FORM      FORMS        FORMS  */
 /* FORMS    the item below is for simple form            FORMS  */
 /*  see the create user form at users/_form.html.erb            */
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/*                    START                                     */
+/* You are here for views/teams/root/new.html.erb  YOU ARE HERE */
+/* formatting difficulties with this'un                         */
+/* very similar to class channel-item5                          */
+
+.rowhere {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: #0000ff;
+  padding: 0px 0px 0px 0px;
+  height: 60px;
+}
+/*                   _form for :  views/teams/root/new.html.erb */
+.channel-item6 {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #00cc00;
+  padding: 0px 0px 0px 0px;
+  height: auto;
+}
+
+/* same as p.four - here we use pixels though */
+p.yourhere {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  font-size: 3px;
+  line-height: 1em;
+  font-weight: bold;
+  color: #ff0000;
+  text-align: right;
+  padding: 10px 0px 0px 0px;
+}
+
+
+/*                     END                                     */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 
 .create {
     background-color: #ff6d1f;  /* button fill */
