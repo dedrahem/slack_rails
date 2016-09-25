@@ -7,8 +7,10 @@ var MessageForm = React.createClass({
   render: function() {
     return(
       <div className="message-form">
-        <input type="text" ref="message"/>
-        <a href="#" onClick={ this.submitMessage }>Add Message</a>
+        <input  type="text" ref="message"/>
+        <div className="dogbox">
+        <a id="bigdog" href="#" onClick={ this.submitMessage }>Add Message</a>
+        </div>
       </div>
     );
   }

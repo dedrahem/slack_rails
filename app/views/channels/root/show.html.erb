@@ -14,10 +14,23 @@
 
 </div>                              <!-- close topics div container  -->
 
-<div class="topic-item4">
+<div class="topic-item4"> <!-- the javascript div -->
   <p class="five">-Messages-</p>
+<!-- app/assets/javascripts/components/messages_container.js.jsx  -->
+<!-- this container holds calls to message, message_list and      -->
+<!-- message_form.  In each is a ref to its div being message,    -->
+<!-- message-list and message-form.  These need style             -->
+<!-- message is each individual message or slack.  The message    -->
+<!-- is contained in the message-list div which is itself         -->
+<!-- contained in message-container .                             -->
+
   <%= react_component 'MessagesContainer', { channelId: @channel.id } %>
-</div>
+
+<!-- everything for messages is styled from callouts in the js code -->
+<!-- this includes the ADD MESSAGES button and the text that goes   -->
+<!-- into the input box.                                            -->
+
+</div>  <!-- CLOSE DIV  topic-item4 the jscript div   -->
 
 
 <!-- this provides a little button for return to channels page -->

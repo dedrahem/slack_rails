@@ -101,6 +101,7 @@ textarea {
 /*        will style a class   - JUMBOTRON                */
 /* jumbotron AND .center found in sessions/new.html.erb   */
 
+
 .center {
   text-align: left;
   h1 {
@@ -187,13 +188,19 @@ p.one {
 
 /*   < < < < < <    p.two   > > > > > > > > > > > */
 /*   < < < <   teams/root/show.html.erb  > > > >  */
+/*  careful, p.two is used several times          */
 p.two {
   font-size: 1.8em;
   font-weight: bold;
   line-height: 1.7em;
   color: #000000;
-  padding: 8px 0px 2px 0px;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  padding-left: 4px;
 }
+/*    gave this padding to stop it from slamin' */
+/*    into the left hand side of the frame      */
 /*    < < < < < <   p.two   > > > > > > > > */
 /*    < < < < < <   p.two   > > > > > > > > */
 
@@ -208,12 +215,14 @@ p.three {
 /*    < < < < < <   p.three   > > > > > > > > */
 
 /*    < < < < < <   p.four  > > > > > > > > */
+/* basically used for the YOU ARE HERE, and */
+/* in more than 1 place                     */
 p.four {
   font-size: .8em;
   line-height: 1.7em;
   font-weight: normal;
   color: #000000;
-  padding: 1px 0px 1px 0px;
+  padding: 1px 4px 1px 0px;
 }
 /*    < < < < < <   p.four   > > > > > > > > */
 
@@ -237,17 +246,76 @@ p.six {
 }
 /*    < < < < < <   p.six   > > > > > >  > */
 
+/* javaSCRIPT items styling : styling itmes of javaSCRIPT   */
+/*  views/channels/root/show.html.erb                       */
+/* message-container holds message-list which holds message */
+/*  message-list hasn't needed any styling                  */
+.message-list {} /* this is basically a container           */
+/* .message is the list of messages listed for view         */
 .message {
-  font-size: .8em;
-  line-height: 1.7em;
+  font-size: .6em;
+  line-height: 1.4em;
   font-weight: bold;
   color: #000000;
-  padding: 1px 0px 1px 0px;
+  padding-top: 6px;
+  padding-right: 2px;
+  padding-bottom: 6px;
+  padding-left: 4px;
 }
+/* message-form styles text entered into the input msg box */
+.message-form {
+  color: #3d3d3d; /* a dark grey */
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 36px;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+}
+/* a container to keep the button off the input box */
+.dogbox {
+  width: auto;
+  height: auto;
+  padding: 10px 0px 4px 0px;
+}
+/* the Add Message button */
+#bigdog {
+				color: #333333;
+        font-size: 18px;
+        font-weight: normal;
+        /* line-height: 36px; */
+				/* text-shadow: 0px 1px 1px #ffffff; */
+        border-style: solid;
+        border-width: 2px;
+        border-color: #363636;
+        border-radius: 8px;
+        padding: 4px 9px 4px 9px;
+			  /*	border-bottom: 2px solid #b2b2b2;   a light grey */
+				background-color: #ebebeb;
+				background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#c7c7c7));
+				background: -moz-linear-gradient(top, #ebebeb, #c7c7c7);
+				background: -o-linear-gradient(top, #ebebeb, #c7c7c7);
+				background: -ms-linear-gradient(top, #ebebeb, #c7c7c7);
+        &:hover {
+				color: #440000;
+        font-size: 18px;
+        font-weight: normal;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #363636;
+        border-radius: 8px;
+        background-color: #ffffff;
+        text-decoration: none;
+				/* background-color: #fcfcb0; */
+				/* background: -webkit-gradient(linear, left top, left bottom, from(#fcfcb0), to(#c7c7c7)); */
+				/* background: -moz-linear-gradient(top, #ebebeb, #c7c7c7);     */
+				/* background: -o-linear-gradient(top, #ebebeb, #c7c7c7);       */
+				/* background: -ms-linear-gradient(top, #ebebeb, #c7c7c7);      */
+        }
+    }
 
-
-
-
+/* javaSCRIPT items styling : styling itmes of javaSCRIPT    END  */
 
 .mychanls {   /*    see teams/root/index.html.erb  2 places  */
     display: inline-block;
