@@ -160,16 +160,9 @@ h4 {
 /* h4                                 h4               */
 
 /* h5                                h5                */
-/*        h5 is not used                  h5 not used  */
-h5 {
-  font-size: 8.3em;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  text-align: left;
-  font-weight: normal;
-  color: #880022;
-}
-/* h5 end                             h5 end          */
+/*        h5 is not used - HERE !    h5 not here       */
+/* H5 is found below at teams/root/new.html_form       */
+/* h5 end                             h5 end           */
 
 p {
   font-size: 1.1em;
@@ -417,7 +410,7 @@ p.six {
 
 .teambanner {       /* teams/root/show.html.erb */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start; /* main axis alignment */
   align-content: flex-start; /* cross axis alignment  */
@@ -792,35 +785,26 @@ input {
 /* formatting difficulties with this'un                         */
 /* very similar to class channel-item5                          */
 
-.rowhere {
-  border-width: 2px;
-  border-style: dotted;
-  border-color: #0000ff;
-  padding: 0px 0px 0px 0px;
-  height: 60px;
-}
-/*                   _form for :  views/teams/root/new.html.erb */
+/*    SIMPLE FORM    _form for :  views/teams/root/new.html.erb */
 .channel-item6 {
-  border-width: 2px;
-  border-style: dashed;
-  border-color: #00cc00;
-  padding: 0px 0px 0px 0px;
+  /*  border-width: 2px;      */
+  /*  border-style: dashed;   */
+  /*  border-color: #00cc00;  */
+  padding: 4px 0px 0px 0px;
   height: auto;
+  color: rgba(250,0,0, 0.3);
 }
 
-/* same as p.four - here we use pixels though */
-p.yourhere {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #000000;
-  font-size: 3px;
-  line-height: 1em;
-  font-weight: bold;
-  color: #ff0000;
+h5 {
+  /*    border-width: 2px;      */
+  /*    border-style: dashed;   */
+  /*    border-color: #aa0000;  */
+  padding: 0px 0px 0px 0px;
+  font-size: .6em;
+  letter-spacing: 1px;
   text-align: right;
-  padding: 10px 0px 0px 0px;
+  font-weight: normal;
 }
-
 
 /*                     END                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
