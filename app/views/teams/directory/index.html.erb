@@ -1,7 +1,61 @@
-<% @teams.each do |team| %>
-  <div class="team">
-    <p><%= team.name %></p>
-    <p><%= team.description %></p>
-    <%= link_to 'Add Me', add_team_path(team.id), method: :post %>
+<div class="teamwrap"> <!-- the A container -->
+
+<!--  THIS SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
+<% rowcolor = 0 %>
+<% puts ":                  setting alt row color shades "%>
+<% puts ":                  views/teams/directory/index.html.erb"%>
+<% puts " rowcolor index number is set = : #{rowcolor}"%>
+<% puts " "%>
+<% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
+<% puts " "%>
+<% rowid = "void" %>    <!-- introduce the variable sort of -->
+<% rowcolor = 1 %>                <!-- row color's flag is ODD -->
+<% @teams.each do |team| %>  <!-- BEGIN THE DO CONTAINER for table row -->
+<% puts " rowcolor index number is set = : #{rowcolor}"%>
+  <% if rowcolor.even? %>
+      <!--  div id="noshade">  The noshade IF DIV -->
+      <% rowid = "noshade" %>
+      <% puts "even" %>  <!-- Select #style what doesn't shade row -->
+  <% else %>
+      <!--    div id="shade">   the shade IF DIV -->
+      <% rowid = "shade" %>
+      <% puts "odd" %>  <!-- Style will shade ODD rows -->
+  <% end %>   <!-- END THE IF here or down there  ???  -->
+
+  <!--       THE CHANNEL CONTAINER IS THE ROW      -->
+<% puts " "%>
+<% puts " "%>
+<% puts " THE rowid is now equiv to : #{rowid}"%>
+<% puts " "%>
+<% puts " "%>
+<!-- channel-container DO forms the table -->
+<!-- div class="channel-container"  currently defeated  -->
+
+<!--   div class="teamwrap"   -->
+<!-- x%x @teams.each do |team| %x >  this doesn't go here -->
+  <div id="<%= rowid %>" >
+  <!--  div class="teamrow" ?this makes the items below into a row -->
+    <div class="teamname">
+      <div class="name-child">
+        <%= team.name %>
+      </div>
+    </div>
+    <div class="teamdescr">
+      <div class="descr-child">
+      <%= team.description %>
+      </div>
+    </div>
+    <div class="teamlink">
+      <div class="link-child">
+      <%= link_to 'Add Me', add_team_path(team.id), method: :post %>
+    </div>
   </div>
+</div> <!-- close the row id -->
+  <% puts " "%>
+  <% puts ":      setting alternating row colors "%>
+  <% puts ":      views/teams/directory/index.html.erb "%>
+  <% rowcolor = rowcolor + 1 %>
+  <% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
 <% end %>
+</div>
+<!-- close the starting wrapper the A div -->

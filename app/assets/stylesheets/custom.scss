@@ -527,6 +527,7 @@ p.six {
   flex-direction: row;
   justify-content: space-around;
   height: auto;
+  border-radius: 6px;
 }   /* close the class channel-container */
 
 #shade {
@@ -773,12 +774,113 @@ input {
 /*  FORMS                     FORMS                      FORMS  */
 /*  FORMS                     END                        FORMS  */
 
-
 /* FORMS       FORMS       SIMPLE FORM      FORMS        FORMS  */
 /* FORMS    the item below is for simple form            FORMS  */
 /*  see the create user form at users/_form.html.erb            */
 
+/*              TEAM UTILITIES                                  */
+/*      views/teams/directory/index.html.erb                    */
+.teamwrap {
+  display: flex;
+  flex-direction: column;
+}
+/*  teamwrap NOT container-bg, teamrow not used, difficult  */
+/*              .teamrow {                                  */
+/*              display: flex;                              */
+/*              flex-direction: row;                        */
+/*              width: 100%;                                */
+/*              padding: 5px 2px 5px 2px;                   */
+/*              }                                           */
+/*  teamwrap NOT container-bg, teamrow not used, difficult  */
 
+.teamname {
+  display: flex;            /* added */
+  flex-direction: column;   /* added */
+  border-width: 1px;
+  border-color: #0020aa;
+  border-style: solid;
+  border-radius: 8px;
+  background: rgba(250,250,0, 0.1);
+  padding: 5% 0px 5% 0px;
+  margin-top: 0px;
+  height: auto;             /* set to auto, was 100% */
+  width: 25%;         /* WATCHOUT for the link-height callout       */
+  line-height: 24px;  /* aka leading-is the gap above a row of text */
+  font-weight: bold;  /* this gap is set by the diff between        */
+  font-size: 14px;    /* font-size and line-height  (duckett283)    */
+  color: #2020202;
+  text-align: center;
+  justify-content: center;  /* changed was align-content, center */
+  overflow: hidden;
+  }
+
+.name-child {
+  padding: 5% 0px 5% 0px;
+     /*   border: 1px 0px 1px 0px;      */
+     /*   border-color: #990000;        */
+     /*   border-style: solid;          */
+}
+
+.teamdescr {
+  display: flex;            /* added  */
+  flex-direction: column;   /* added */
+  border-width: 1px;
+  border-color: #0020aa;
+  border-style: solid;
+  border-radius: 8px;
+  background: rgba(0,250,0,0.1);
+  padding: 5% 0px 5% 0px;
+  margin-top: 0px;
+  height: auto;             /* set to auto, was 100% */
+  width: 65%;
+  line-height: 24px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #202020;
+  text-align: center;
+  justify-content: center;  /* changed was align-content, center */
+}
+
+.descr-child {
+  padding: 5% 0px 5% 0px;
+  /*   border: 1px 0px 1px 0px; */
+  /*   border-color: #990000;  */
+  /*   border-style: solid;   */
+}
+
+.teamlink {
+  display: flex;            /* added  */
+  flex-direction: column;   /* added */
+  border-width: 1px;
+  border-color: #0020aa;
+  border-style: solid;
+  border-radius: 8px;
+  background: rgba(0,0,250, 0.1);
+  padding: 5% 0px 5% 0px;
+  margin-top: 0px;
+  height: auto;             /* set to auto, was 100% */
+  width: 10%;
+  line-height: 24px;
+  font-weight: bold;
+  font-size: 13px;          /* changed from an em to 14px */
+  color: #202020;
+  text-align: center;
+  justify-content: center;  /* changed was align-content, center */
+  overflow: hidden;
+}
+
+.link-child {
+  padding: 5% 0px 5% 0px;
+  /* border: 1px 0px 1px 0px; */
+  /* border-color: #00ff00;   */
+  /* border-style: solid;     */
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o  */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /*                    START                                     */
 /* You are here for views/teams/root/new.html.erb  YOU ARE HERE */

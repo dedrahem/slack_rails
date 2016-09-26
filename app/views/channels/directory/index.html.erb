@@ -1,4 +1,4 @@
-<p> views/channels/directory/index.html.erb <p>
+
 <% @channels.each do |channel| %>
   <div class="channel">
     <p><%= channel.name %></p>
@@ -6,3 +6,6 @@
     <%= link_to 'Add Me', add_channel_path(channel.id), method: :post %>
   </div>
 <% end %>
+
+
+<!-- views/channels/directory/index.html.erb -->
