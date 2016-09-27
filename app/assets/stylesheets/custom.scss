@@ -141,6 +141,7 @@ h2 {
 /* see jumbotron of sessions/new.html.erb   h3 is busy */
 h3 {
   font-size: 1em;
+  padding-top: 8px;
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
@@ -780,6 +781,49 @@ input {
 
 /*              TEAM UTILITIES                                  */
 /*      views/teams/directory/index.html.erb                    */
+
+.topic-name {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+  height: auto;
+  width: 40%;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: left;
+}
+
+.topic-desc {
+  /* background: tomato; */
+  padding: 5px;
+  margin-top: 5px;
+  height: auto;
+  width: 35%;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: center;
+}
+
+.topic-addn {
+  /* background: tomato; */
+
+  padding: 5px;
+  margin-top: 5px;
+  height: auto;
+  width: 25%;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: right;
+}
+
+
 .teamwrap {
   display: flex;
   flex-direction: column;
@@ -796,10 +840,6 @@ input {
 .teamname {
   display: flex;            /* added */
   flex-direction: column;   /* added */
-  border-width: 1px;
-  border-color: #0020aa;
-  border-style: solid;
-  border-radius: 8px;
   background: rgba(250,250,0, 0.1);
   padding: 5% 0px 5% 0px;
   margin-top: 0px;
@@ -808,7 +848,7 @@ input {
   line-height: 24px;  /* aka leading-is the gap above a row of text */
   font-weight: bold;  /* this gap is set by the diff between        */
   font-size: 14px;    /* font-size and line-height  (duckett283)    */
-  color: #2020202;
+  color: #202020;
   text-align: center;
   justify-content: center;  /* changed was align-content, center */
   overflow: hidden;
@@ -824,11 +864,7 @@ input {
 .teamdescr {
   display: flex;            /* added  */
   flex-direction: column;   /* added */
-  border-width: 1px;
-  border-color: #0020aa;
-  border-style: solid;
-  border-radius: 8px;
-  background: rgba(0,250,0,0.1);
+  background: rgba(250,250,0,0.1);
   padding: 5% 0px 5% 0px;
   margin-top: 0px;
   height: auto;             /* set to auto, was 100% */
@@ -851,11 +887,7 @@ input {
 .teamlink {
   display: flex;            /* added  */
   flex-direction: column;   /* added */
-  border-width: 1px;
-  border-color: #0020aa;
-  border-style: solid;
-  border-radius: 8px;
-  background: rgba(0,0,250, 0.1);
+  background: rgba(250,250,0, 0.1);
   padding: 5% 0px 5% 0px;
   margin-top: 0px;
   height: auto;             /* set to auto, was 100% */
@@ -894,7 +926,7 @@ input {
   /*  border-color: #00cc00;  */
   padding: 4px 0px 0px 0px;
   height: auto;
-  color: rgba(250,0,0, 0.3);
+  color: rgba(250,0,0, 0.2);
 }
 
 h5 {
@@ -911,6 +943,11 @@ h5 {
 /*                     END                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+.createteam {
+  background-color: rgba(100,100,100,.4);
+  border-radius: 6px;
+}
+/* last minute format so this form wouldn't look soooo vanilla */
 
 .create {
     background-color: #ff6d1f;  /* button fill */

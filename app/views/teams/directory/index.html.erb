@@ -1,5 +1,27 @@
 <div class="teamwrap"> <!-- the A container -->
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxx                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxx    CAUTION : DRY VIOLATION AHEAD    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxx                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+  <div class="teambanner">
+    <p class="two">TEAM DIRECTORY</p>
+    <!--  p class="three" > simple text paragraph<x/xp -->
+  </div>  <!-- close the page top division, teambanner -->
+
+  <div class="topic-container">       <!-- topics div container       -->
+    <div class="topic-name">Team Name</div>
+    <div class="topic-desc">Description</div>
+    <div class="topic-addn">Description</div>
+  </div>                              <!-- close topics div container  -->
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+
+
 <!--  THIS SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
 <% rowcolor = 0 %>
 <% puts ":                  setting alt row color shades "%>
@@ -57,5 +79,12 @@
   <% rowcolor = rowcolor + 1 %>
   <% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
 <% end %>
-</div>
-<!-- close the starting wrapper the A div -->
+<div class="button-container">       <!-- container for button and location -->
+  <div class="channel-item4">
+    <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
+  </div>
+  <div class="channel-item5">
+    <p class="four">teams/directory/index.html.erb</p>   <!-- YOU ARE HERE -->
+  </div>
+</div> <!-- close the button container directly above -->
+</div>  <!-- close the starting wrapper the A div -->
