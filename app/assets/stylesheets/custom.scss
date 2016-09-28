@@ -50,11 +50,24 @@
 /*                        BODY STYLING                    */
 /*                        BODY STYLING                    */
 
-body {
-  padding-top: 200px;/*anything less and the header will */
-  /*                  squash the content when the view   */
-  /*                  is narrowed below md sizing        */
-}
+/*                    anything less and the header will */
+/*                   squash the content when the view   */
+/*                   is narrowed below md sizing        */
+
+/* body {                 */
+/*   padding-top: 200px; */
+/* }                    */
+  body {
+      padding-top: 200px;
+      background: linear-gradient(
+        rgba(0,0,0, 0.3),
+        rgba(0,0,0, 0.3)
+        ), url("/assets/bellagio.jpg") no-repeat center center fixed;
+      -webkit-backgroud-size: cover;
+      -moz-background-size: cover;
+      /* -o-background-size: cover; */
+      background-size: cover;
+    }
 
 /* below is a SASS mix-in box_sizing which allows a group */
 /* of CSS rules to be used for multiple elements          */
