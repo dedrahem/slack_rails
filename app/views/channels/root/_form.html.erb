@@ -1,9 +1,27 @@
-<p>views/channels/root/_form</p>
+<!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
+<div class="teambanner">
+  <p class="two">New Channel for: <%= @team.name %></p>
+</div> <!-- close teambanner -->
+<!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
+<!-- THIS IS A HELPFUL LINK FOR SIMPLE FORM -->
+<!-- https://github.com/plataformatec/simple_form -->
 <%= simple_form_for @channel do |f| %>
   <%= f.hidden_field :team_id, value: @team.id %>
 
-  <%= f.input :name %>
+  <%= f.input :name, label: 'Enter Channel Name',label_html: { class: 'my_class' } %>
   <%= f.input :description %>
 
   <%= f.button :submit %>
 <% end %>
+
+<!-- %xx= f.input :username, label_html: { class: 'my_class' } x%x -->
+
+
+
+<!-- this provides a little button for return to channels page -->
+<div class="button-container">       <!-- container for button and location -->
+  <div class="channel-item4"></div>  <!-- a blank div -->
+  <div class="channel-item5">
+    <p class="four">views/channels/root/new.html.erb</p>   <!-- YOU ARE HERE -->
+  </div>
+</div> <!-- close the button container directly above -->

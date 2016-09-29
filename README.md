@@ -9,6 +9,10 @@
 * bootstrap-sass: 3.3
 
 
+### Simple_Form
+Ref. Useful github link for use and class definition.
+https://github.com/plataformatec/simple_form
+
 Action Cable - short intro
 
 Action Cable is not used in this application.
@@ -31,7 +35,7 @@ https://github.com/rails/rails/tree/master/actioncable
 
 
 
-Creating a chat using Rails' Action Cable 
+Creating a chat using Rails' Action Cable
 tutorials.pluralsight.com/ruby-ruby-on-rails/creating-a-chat-using-rails-action-cable
 
 
@@ -41,9 +45,6 @@ Action Cable Overview — Ruby on Rails Guides
 edgeguides.rubyonrails.org/action_cable_overview.html
 
 
-
-
-
 Action Cable and WebSockets: An in-Depth Tutorial
 https://www.sitepoint.com/action-cable-and-websockets-an-in-depth-tutorial/
 
@@ -51,3 +52,7 @@ https://www.sitepoint.com/action-cable-and-websockets-an-in-depth-tutorial/
 Real-Time Rails: Implementing WebSockets in Rails 5 with Action Cable
 https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5...
 
+
+### Simple_Form
+Ref. Useful github link for use and class definition.
+https://github.com/plataformatec/simple_form
