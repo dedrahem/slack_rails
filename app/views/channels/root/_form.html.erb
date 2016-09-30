@@ -9,7 +9,7 @@
   <%= f.hidden_field :team_id, value: @team.id %>
 
   <%= f.input :name, label: 'Enter Channel Name',label_html: { class: 'my_class' } %>
-  <%= f.input :description %>
+  <%= f.input :description, label: 'Channel Description', label_html: {class: 'my_class'} %>
 
   <%= f.button :submit %>
 <% end %>

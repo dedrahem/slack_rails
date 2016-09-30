@@ -260,10 +260,10 @@ p.six {
 .message-list {} /* this is basically a container           */
 /* .message is the list of messages listed for view         */
 .message {
-  font-size: .6em;
+  font-size: .8em;
   line-height: 1.4em;
   font-weight: bold;
-  color: #000000;
+  color: #f0f000;
   padding-top: 6px;
   padding-right: 2px;
   padding-bottom: 6px;
@@ -414,7 +414,7 @@ p.six {
 .container-bg {
   /* background: linear-gradient(rgba(0,0,0, 0.1),rgba(0,0,0, 0.1)), */
   /*            url("/assets/sprites.jpg") no-repeat center center fixed; */
-  background: linear-gradient(rgba(0,0,0, 0.1),rgba(0,0,0, 0.5)),no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)),no-repeat center center fixed;
   -webkit-backgroud-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -958,9 +958,13 @@ h5 {
 .my_class {
   color: #ffff00;
   font-size: 20px;
-
 }
-
+/*  see my_class as used for simple form styling in       */
+/*  channels/root/new.html.erb as rendered by the _form  */
+/*  simple_form_for @channel do                           */
+/*  f.input :name, label: 'Enter Channel Name',label_html: { class: 'my_class' }  */
+/*  THIS IS A HELPFUL LINK FOR SIMPLE FORM's styling in html  */
+/*  https://github.com/plataformatec/simple_form              */
 
 
 .createteam {
