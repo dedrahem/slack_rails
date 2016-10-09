@@ -13,22 +13,9 @@
 Ref. Useful github link for use and class definition.
 https://github.com/plataformatec/simple_form
 
-### Style Tip #87b129.a08
-Use bootstrap for the components, i.e.
-pretty forms, nice buttons, crisp text, alerts and quick colors.
-THEN use FLEX for the layout of the content.  And watch that the content flex, size and wrap.
+Action Cable - short intro
 
-
-### CENTERING VERTICALLY 	
-6 Methods For Vertical Centering With CSS			          http://vanseodesign.com/css/vertical-centering/
-
-Equal Top and Bottom Padding					                 
-
-
-
-### Action Cable - ???
-
-Action Cable is not used in this application, but what is it?
+Action Cable is not used in this application.
 
 Action Cable debuted at RailsConf 2015 and has been merged into Rails.
 
@@ -58,12 +45,14 @@ Action Cable Overview — Ruby on Rails Guides
 edgeguides.rubyonrails.org/action_cable_overview.html
 
 
-
-
-
 Action Cable and WebSockets: An in-Depth Tutorial
 https://www.sitepoint.com/action-cable-and-websockets-an-in-depth-tutorial/
 
 
 Real-Time Rails: Implementing WebSockets in Rails 5 with Action Cable
 https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5...
+
+
+### Simple_Form
+Ref. Useful github link for use and class definition.
+https://github.com/plataformatec/simple_form
