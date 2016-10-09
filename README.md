@@ -43,7 +43,7 @@ Jesse says, “whenever you migrate on Heroku, well then, $>heroku restart   “
 
 ##### An **abbreeeeeviated** yet, short list of hurdles and takeaways.
 
-1. Shading alternate rows by brute force.  It worked and included a callout for class as an #ID and an @mixin being used with ruby in the view.html.erb . See the html and stylesheet.
+1. Shading alternate rows by brute force.  It worked and included use of an ID# and mixin include with ruby in the view.html.erb . See the html and stylesheet.
 
 2. Rails 5.  Reinstalled Rails 4.  Then decided to move on to Rails 5.  So consequently am now running rails version manager.  But this is okay, now when i select a project directory a system message pop up will say something like:  
 > RVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too, you can ignore these warnings with 'rvm rvmrc warning ignore . . . .
@@ -101,27 +101,27 @@ origin	https://github.com/dedrahem/slack_rails.git (push)
 $> git remote rm heroku
 
 $> git remote -v  
-origin	https://github.com/dedrahem/slack_rails.git (fetch)  
-origin	https://github.com/dedrahem/slack_rails.git (push)  
+origin	https://github.com/dedrahem/slack_rails.git (fetch)
+origin	https://github.com/dedrahem/slack_rails.git (push)
 
 $> git remote add heroku git@heroku.com:slackarama.git  
 
 $> git remote -v
 
-heroku	git@heroku.com:slackarama.git (fetch)  
-heroku	git@heroku.com:slackarama.git (push)  
-origin	https://github.com/dedrahem/slack_rails.git (fetch)  
+heroku	git@heroku.com:slackarama.git (fetch)
+heroku	git@heroku.com:slackarama.git (push)
+origin	https://github.com/dedrahem/slack_rails.git (fetch)
 origin	https://github.com/dedrahem/slack_rails.git (push)
 
 $> git remote add prod git@heroku.com:slackarama.git  
 
 $> git remote -v  
 
-heroku	git@heroku.com:slackarama.git (fetch)  
-heroku	git@heroku.com:slackarama.git (push)  
-origin	https://github.com/dedrahem/slack_rails.git (fetch)  
-origin	https://github.com/dedrahem/slack_rails.git (push)  
-prod	git@heroku.com:slackarama.git (fetch)  
+heroku	git@heroku.com:slackarama.git (fetch)
+heroku	git@heroku.com:slackarama.git (push)
+origin	https://github.com/dedrahem/slack_rails.git (fetch)
+origin	https://github.com/dedrahem/slack_rails.git (push)
+prod	git@heroku.com:slackarama.git (fetch)
 prod	git@heroku.com:slackarama.git (push)
 
 $> git status  
@@ -161,7 +161,7 @@ $> git push heroku master
 
 7. Problems with the bellagio background image after deploy.  
 
-    Background image does not appear on the Heroku app’s render.  The bellagio background appeared while using the local_server_3K.  The immediate consideration is that “Background images are not using the sass ‘image_url’ function.”
+    Background image does not appear on the Heroku app’s render.  The bellagio background appeared while using local_server_3K.  The immediate consideration is that “Background images are not using the sass ‘image_url’ function.”
 
     There is some mention that when pushing to Heroku, the image's name is cached using a hash.  Which may inadvertently rename the image rendering it unseen by the program execution.  The Heroku output log contained the following results,
 
@@ -222,6 +222,4 @@ From the Github - found at http://www.markdowntutorial.com
   * All you have control over is the display of the text—stuff for instance bold, creating headers, and organizing lists.
   * There does exist “extended” implementations of Markdown that support formats like tables, definition lists, footnotes, and more. Because they’re non-standard, they’re not essential to learning the basics.
   * Links to additional tutorials and information for Markdown including the extended markdown may be found at the end of the markdown tutorial provided by the above link.
-
-
-* Markdown here is used with a mad-dog (MD) editor.  The editor is drilling down to the dot.md file in the app for editing and saving.
+  
