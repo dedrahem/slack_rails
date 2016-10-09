@@ -57,19 +57,16 @@
 /* body {                 */
 /*   padding-top: 200px; */
 /* }                    */
-/*  background-image: asset-data-url("logo.png")  */
   body {
       padding-top: 200px;
-      background-image: image-url('bellagio.jpg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      background-size: cover;
-      /* background-size: 100%; */
-      /* background-image: asset-url("bellagio.jpg", image) no-repeat center center fixed; */
+      background: linear-gradient(
+        rgba(0,0,0, 0.3),
+        rgba(0,0,0, 0.3)
+        ), url("/assets/bellagio.jpg") no-repeat center center fixed;
       -webkit-backgroud-size: cover;
       -moz-background-size: cover;
       /* -o-background-size: cover; */
+      background-size: cover;
     }
 
 /* below is a SASS mix-in box_sizing which allows a group */
