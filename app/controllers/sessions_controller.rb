@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
-      puts ":           Sessions Controller"
+      puts ":                 Sessions Controller"
       puts ":             def create render new !"
       render :new
     end

@@ -4,6 +4,7 @@ class Channels::RootController < ApplicationController
     @team = @channel.team
     @message  = Message.new
     @messages = @channel.messages
+    puts "YOU ARE HERE - view/channels/rootcontroller #show = = = = = ="
   end
 
   def new

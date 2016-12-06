@@ -1,61 +1,56 @@
-<!-- <o%o= link_to 'My Channels', teams_path, id:  "alink"%></aoo -->
+<!-- views/teams/root/show.html.erb -->
+
+
 <div class="container-bg">
 <div class="teambanner">
-  <p class="two">#Channel<%= @team.id %> : <%=@team.name %></p>
+  <p class="two">Team_<%= @team.id %> : <%=@team.name %></p>
   <p class="three"> <%=@team.description%> </p>
 </div> <!-- close the page top division, teambanner -->
 
 <!-- having problem with wrap for short descriptions -->
 <!-- - - - - - -      topics div    - - - - - - - -   -->
 
+<% puts " "%>
+<% puts "YOU ARE HERE at :  views/teams/root/show.html "%>
+<%= puts "STATUS: team_id of #{@team.id.inspect} ...team is #{@team.inspect}" %>
+<%= puts "STATUS: team name - #{@team.name.inspect} . . . description - #{@team.description.inspect} " %>
+<% puts " "%>
+<% puts "problem is I appear to be listing each channel for the (current) user "%>
+<% puts "and NOT a list of the channels associated with the TEAM "%>
+<% puts " "%>
+
+
 <div class="topic-container">       <!-- topics div container       -->
-  <div class="topic-item1">Discussion Topic</div>
+  <div class="topic-item1">Team Channels</div>
   <div class="topic-item3">
-    <a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">New Topic</a>
+    <a href = "/teams/<%= @team.id %>/channels/new" class="btn btn-default btn-sm active" role="button">ADD CHANNEL</a>
   </div>
 </div>                              <!-- close topics div container  -->
 
-<!--  topic button gave me a lot of trouble with putting that id in there -->
-<!--   bascially being talent impaired, yes i know.                       -->
-<!-- %x=x link_to "Create New Discussion: ", new_channel_path(@team.id)%><x%x=@team.namex% -->
-<!-- <a href="/teams/4/channels/new" see the ruby added to output the id number -->
-<!-- - - - - - - - - - - - close topics div - - - - - - - -   -->
-<!-- - - - - - - - - - - - close topics div - - - - - - - -   -->
 
-<!--                  <hx><%="ref text"%></hx>                -->
 
-<!--  THIS SECTION FORMS THE TABLE DO OUTPUT for lack of better term -->
+<!--  THIS SECTION FORMS THE TABLE LIST of CHANNELS for the TEAM  via the DO  -->
 <% rowcolor = 0 %>
-<% puts " "%>
-<% puts " "%>
-<% puts " rowcolor index number is set = : #{rowcolor}"%>
-<% puts " "%>
-<% puts " "%>
-<% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
-<% puts " "%>
-<% puts " "%>
-
-<% rowid = "void" %>    <!-- introduce the variable sort of -->
+<% puts "THE CHANNELS ARE LIKE TOPIC ITEMS "%>
+<% rowid = "void" %>    <!-- setting a variable to id the row  -->
 <% rowcolor = 1 %>                <!-- row color's flag is ODD -->
-<% @channels.each do |channel| %>  <!-- BEGIN THE DO CONTAINER -->
-<% puts " rowcolor index number is set = : #{rowcolor}"%>
+<% puts "Now - begin the DO LOOP @channels.each do |channel| list "%>
+<% @channels.each do |channel| %>                     <!--  BEGIN THE DO LOOP for LIST  -->
+<% puts "begin iteration" %>
+<%= puts " rowcolor index number is set = to: #{rowcolor}"%>
   <% if rowcolor.even? %>
       <!--  div id="noshade">  The noshade IF DIV -->
       <% rowid = "noshade" %>
-      <% puts "even" %>  <!-- Select #style what doesn't shade row -->
+      <% puts "even row number no shading" %>  <!-- Select #style that doesn't shade row -->
   <% else %>
       <!--    div id="shade">   the shade IF DIV -->
       <% rowid = "shade" %>
-      <% puts "odd" %>  <!-- Style will shade ODD rows -->
-  <% end %>   <!-- END THE IF here or down there  ???  -->
+      <% puts "odd row with shading " %>  <!-- Style will shade ODD rows -->
+  <% end %>   <!-- END THE IF -->
 
   <!--       THE CHANNEL CONTAINER IS THE ROW      -->
-<% puts " "%>
-<% puts " "%>
-<% puts " THE rowid is now equiv to : #{rowid}"%>
-<% puts " "%>
-<% puts " "%>
-  <div id="<%= rowid %>" >  <!-- channel-container DO forms the table -->
+<%= puts " THE rowid is = to:  #{rowid}"%>
+  <div id="<%= rowid %>" >  <!-- DIV channel-container DO forms the table -->
   <!-- div class="channel-container"  currently defeated  -->
     <div class="channel-item1">
       <div class="child-item1">
@@ -63,6 +58,10 @@
         <a><%= link_to channel.name, channel_path(channel.id), id: "topic-link" %></a>
       </div>  <!-- close the child div -->
     </div>    <!-- close the parent -->
+    <%= puts " : channel.name is  #{channel.name.inspect}" %>
+    <%= puts " : channel id is   #{channel.id.inspect}" %>
+    <%= puts " : description is  #{channel.description.inspect}" %>
+    <%= puts " : channel.users count is   #{channel.users.count}" %>
 
     <div class="channel-item2">
       <div class="child-item2">
@@ -73,40 +72,30 @@
 
     <div class="channel-item3">
       <div class="child-item3">
-        <%= pluralize(channel.users.count, 'User') %>
+        <%= pluralize(Message.where(channel_id: channel.id).count, 'Message') %>
+        <!-- THIS WORKS x%x= Message.where(channel_id: channel.id).count % -->
+        <!-- THIS DIDN'T work pluralize(Message.@channels.id.count, 'Message') -->
+        <!-- THE ORIGINAL CODE WAS   <x%x= pluralize(channel.users.count, 'User') %x>x -->
         <!--   p>test</p  -->
       </div>  <!-- close the child div    -->
     </div>    <!-- close the parent       -->
 
-  </div>      <!-- CLOSE the row id div - forms the table -->
+  </div>      <!-- DIV CLOSE the row id div - forms the table -->
   <!-- the channel-container, the row, is contained in the DO LOOP -->
 
-  <!--    /div>    close the shade  IF DIV  -->
-  <!--    /div>    close the noshade IF DIV -->
-  <!--    x% end %x  END THE IF HERE ? or up there ?  -->
-  <!--    THIS IS JUST TOO CLUMSY TO MAKE WORK  -->
-
-  <% puts " "%>
-  <% puts " "%>
-  <% puts " rowcolor index number is set = : #{rowcolor}"%>
+  <%= puts " rowcolor index number is:  #{rowcolor}" %>
   <% rowcolor = rowcolor + 1 %>
-  <% puts " "%>
-  <% puts " "%>
-  <% puts " rowcolor index number is set = : #{rowcolor}"%>
-  <% puts " "%>
-  <% puts " "%>
-  <% puts " - - - - - - - - - - - - - - - - - - - - - - - - - "%>
-  <% puts " "%>
-  <% puts " "%>
-
+  <%= puts " increment rowcolor index to:   #{rowcolor}" %>
+<% puts "end iteration " %>
 <% end %>   <!-- END the DO the DO for table creation  -->
+<% puts "End of the DO LOOP for  @channels.each do |channel| " %>
 
 <!--  ABOVE SECTION FORMS THE DO OUTPUT TABLE    END TABLE -->
 
 <!-- this provides a little button for return to channels page -->
 <div class="button-container">       <!-- container for button and location -->
   <div class="channel-item4">
-    <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
+    <a href="/teams" class="btn btn-default btn-sm active" role="button">My Teams</a>
   </div>
   <div class="channel-item5">
     <p class="four">teams/root/show.html.erb</p>   <!-- YOU ARE HERE -->

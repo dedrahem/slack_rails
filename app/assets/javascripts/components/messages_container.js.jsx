@@ -1,9 +1,11 @@
+
 var MessagesContainer = React.createClass({
   getInitialState () {
     return {
       messages: [],
     }
   },
+
 
   addMessage (message) {
     const url = `/api/channels/${this.props.channelId}/messages`
@@ -26,6 +28,7 @@ var MessagesContainer = React.createClass({
   },
 
   componentDidMount () {
+
     this.fetchMessages()
     this.handle = setInterval(() => { this.fetchMessages() }, 3000)
   },
@@ -33,6 +36,7 @@ var MessagesContainer = React.createClass({
   componentWillUnmount () {
     clearInterval(this.handle)
   },
+
 
   render () {
     return(

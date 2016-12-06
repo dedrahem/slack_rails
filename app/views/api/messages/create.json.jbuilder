@@ -7,4 +7,5 @@ json.message do
     json.firstName @message.first_name
     json.lastName @message.last_name
   end
+  
 end

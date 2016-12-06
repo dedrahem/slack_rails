@@ -1,20 +1,28 @@
+<!--   views/channels/root/show   -->
+
 <div class="container-bg">  <!-- the outermost container -->
 
-  <!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
+  <!-- x views/channels/root/show x x x x x x x x x TOP BANNER x x x -->
   <div class="teambanner">
     <p class="two">Team: <%= @team.name %></p>
   </div> <!-- close teambanner -->
   <!-- x x x x x x x x x x x x x x x x x x x x TOP BANNER x x x -->
-
+<% puts " "%>
+<% puts "= = = = = = YOU ARE IN views/channels/root/show.html.erb = = = = "%>
 <div class="channel-topic">       <!-- topics div container       -->
   <div class="topic-item4">
-    <p class="five">Topic of Discussion : <%= @channel.name %> </p>
+    <p class="five">Team Channel: <%= @channel.name %> </p>
     <p class="six"> <%= @channel.description %></p>
   </div>
 </div>                              <!-- close topics div container  -->
-
-<div class="topic-item4"> <!-- the javascript div -->
-  <p class="five">-Messages-</p>
+<% puts "inspect @channel.name is #{@channel.name} "%>
+<% puts "inspect @channel.description is #{@channel.description} "%>
+<% puts "inspect @channel.id is #{@channel.id} "%>
+<% puts " "%>
+<div class="topic-item4"> <!-- the javascript div this is doing the work -->
+  <p class="five">Messages :</p>
+  <%= react_component 'MessagesContainer', { channelId: @channel.id } %>
+</div>
 <!-- app/assets/javascripts/components/messages_container.js.jsx  -->
 <!-- this container holds calls to message, message_list and      -->
 <!-- message_form.  In each is a ref to its div being message,    -->
@@ -22,20 +30,16 @@
 <!-- message is each individual message or slack.  The message    -->
 <!-- is contained in the message-list div which is itself         -->
 <!-- contained in message-container .                             -->
-
-  <%= react_component 'MessagesContainer', { channelId: @channel.id } %>
-
 <!-- everything for messages is styled from callouts in the js code -->
 <!-- this includes the ADD MESSAGES button and the text that goes   -->
 <!-- into the input box.                                            -->
 
-</div>  <!-- CLOSE DIV  topic-item4 the jscript div   -->
-
+<!-- CLOSE DIV  topic-item4 the jscript div   -->
 
 <!-- this provides a little button for return to channels page -->
 <div class="button-container">       <!-- container for button and location -->
   <div class="channel-item4">
-    <a href="/teams" class="btn btn-default btn-sm active" role="button">My Channels</a>
+    <a href="/teams" class="btn btn-default btn-sm active" role="button">TEAMS</a>
   </div>
   <div class="channel-item5">
     <p class="four">views/channels/root/show.html.erb</p>   <!-- YOU ARE HERE -->

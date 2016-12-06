@@ -1,29 +1,40 @@
-<!-- here you are then, app/views/teams/root/index.html.erb   -->
+<!--    THIS is the WELCOME PAGE              -->
+<!--    or My Channels page that renders      -->
+<!--    immediately AFTER log in              -->
+<!--    app/views/teams/root/index.html.erb   -->
+<!--    views.teams.root.index.html.erb       -->
+<!--    THIS PAGE IS NOW RENAMED to TEAMS     -->
+<!--    you are here :                        -->
+<!--    app/views/teams/root/index.html.erb   -->
 
-<div class="container-fluid">     <!-- the primary container -->
+<div class="container-fluid">       <!-- the primary container -->
   <div class="row indexrow">  <!--  *****  the first and only row as div ****** -->
-<!--  HEAP BIG MOJO HERE ! column 2 of 2 would not match height of column 1 -->
+<!--  Row Height - A PROBLEM! column 2 of 2 would not match height of column 1 -->
 <!-- notice the name given to the row above, indexrow, SEE STYLES   -->
     <div class="col-sm-8 col-md-8 rootcol1">  <!-- column 1 of 2 -->
-      <div class="mychanls">My Channels</div>
+      <div class="mychanls">My TEAMS</div>
+      <% puts "  " %>
+      <% puts " app/views/teams/root/index.html.erb " %>
       <% @teams.each do |team| %>
         <div class="team">  <!-- the team div -->
           <a><%= link_to team.name, team_path(team),id: "globlinktwo" %></a>
           <p><%= team.description %></p>
           <p><%= pluralize(team.users.count, 'User') %></p>
+          <%= puts " team name : #{team.name}" %>
+          <%= puts " team_id : #{team.id}" %>
+          <% puts "  " %>
         </div>              <!-- close team div -->
       <% end %>
     </div>                  <!-- close column 1 of 2 -->
 
-
     <div class="col-sm-4 col-md-4 rootcol2">  <!-- column 2 of 2 teams -->
-                <!-- yes, this column has 2 rows nested inside of it   -->
-      <div class="myutils">Team Utilities </div>
+                <!-- This column will have 2 rows nested inside of it   -->
+      <div class="myutils">TEAM UTILITIES</div>
 
         <div class="row">     <!-- first row for new team -->
           <div class="col-md-12">
               <a><%= link_to 'New Team', new_team_path, id: "globlink" %></a>
-            <p class="one">Use this link to create a new team.  The new team will be added to My Channels. You will need a team name and short description.</p>
+            <p class="one">Create a new team to be added to the list. Provide a team name and short description.</p>
           </div>
         </div>                 <!-- close the first row -->
 

@@ -9,10 +9,14 @@
     <%= csrf_meta_tags %>
 
     <title>MySlackApp</title>
-    <!-- {media: 'all', 'data-turbolinks-track': 'reload'} -->
-    <%= stylesheet_link_tag('application', {media: 'all', 'data-turbolinks-track'=>true}) %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track'=>true %>
-    <!-- 'data-turbolinks-track': 'reload' -->
+
+    <!-- x%x= stylesheet_link_tag('application', {media: 'all', 'data-turbolinks-track'=>true}) % -->
+    <!-- x%x= javascript_include_tag 'application', 'data-turbolinks-track'=>true % -->
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
   </head>
 
   <body>
