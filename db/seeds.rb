@@ -139,6 +139,13 @@ happyhdmsg3 = Message.create(body: 'message of happys high def personal player i
 happyjsmsg4 = Message.create(body: 'message posted by happy re javascript in team technology', channel_id: javascript.id, user_id: happy.id)
 frankinmsg5 = Message.create(body: 'message of from Franklin IoT and innovation', channel_id: innovation.id, user_id: franklin.id)
 charailmsg6 = Message.create(body: 'message from charles team iron yard channel rails', channel_id: rails.id, user_id: charles.id)
+frvocabmsg7 = Message.create(body: 'message from franklin concerning vocabulary in technology', channel_id: vocab.id, user_id: franklin.id)
+frboybomsg8 = Message.create(body: 'message in cowboy bob and technology from franklin cowboy bob FAQ', channel_id: boybob.id, user_id: franklin.id)
+dougfrimsg9 = Message.create(body: 'Douglas message for fridays in iron yard team', channel_id: fridays.id, user_id: douglas.id)
+ddpubsmsg10 = Message.create(body: 'message from doug in team iron yard and Fave Pubs', channel_id: pubs.id, user_id: douglas.id)
+musicjmsg11 = Message.create(body: 'message from charles music in the commons team iron yard channel rails', channel_id: music.id, user_id: james.id)
+jmbotimsg12 = Message.create(body: 'message from the tinman regarding learning channel flex and css jumbotron team', channel_id: learning.id, user_id: tinman.id)
+didflxmsg13 = Message.create(body: 'message flexbox team, didley channel is sugg ref for flex ', channel_id: flexlearn.id, user_id: didley.id)
 puts "   End message creation and assignments"
 puts " "
 
