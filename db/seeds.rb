@@ -108,7 +108,7 @@ fridays = Channel.create(name: 'Friday Pints', description: 'Suggested brews for
 pubs = Channel.create(name: 'Favorite Area Pubs', description: 'Favorite local pubs.  Suggestions for a quick pint.', team_id: iron_yard.id)
 music = Channel.create(name: 'Music Suggestions Common Area', description: 'Make suggestions for the friday playlist, or Brian will make his choices.', team_id: iron_yard.id)
 learning = Channel.create(name: 'References for Flex and CSS', description: 'Make a suggestion for books and pdf based teaching materials.', team_id: jumbotron.id)
-flexlearn = Channel.create(name: 'Suggested References for FLEX.', description: 'Dedicated to becoming more proficient in flex.  Taking a stand on a formatting platform. Get it?', team_id: flexbox.id)
+flexlearn = Channel.create(name: 'Suggested References for FLEX - Suggestions, References and Comments', description: 'Dedicated to becoming more proficient in flex.  Taking a stand on a formatting platform. Get it?', team_id: flexbox.id)
 puts "   "
 puts "   Completed the channels as, Channel.create.  "
 puts "   "
@@ -144,8 +144,16 @@ frboybomsg8 = Message.create(body: 'message in cowboy bob and technology from fr
 dougfrimsg9 = Message.create(body: 'Douglas message for fridays in iron yard team', channel_id: fridays.id, user_id: douglas.id)
 ddpubsmsg10 = Message.create(body: 'message from doug in team iron yard and Fave Pubs', channel_id: pubs.id, user_id: douglas.id)
 musicjmsg11 = Message.create(body: 'message from charles music in the commons team iron yard channel rails', channel_id: music.id, user_id: james.id)
-jmbotimsg12 = Message.create(body: 'message from the tinman regarding learning channel flex and css jumbotron team', channel_id: learning.id, user_id: tinman.id)
-didflxmsg13 = Message.create(body: 'message flexbox team, didley channel is sugg ref for flex ', channel_id: flexlearn.id, user_id: didley.id)
+
+jmbotimsg12 = Message.create(body: 'Tinman - Flexible Boxes in CSS: Free Yourself with Flexbox', channel_id: learning.id, user_id: tinman.id)
+jmbockmsg22 = Message.create(body: 'Chuck - Grid Layout in CSS: Interface Layout for the Web', channel_id: learning.id, user_id: charles.id)
+jmbocbmsg32 = Message.create(body: 'Cowboy - Table Layout in CSS: CSS Table Rendering in Detail', channel_id: learning.id, user_id: cowboy.id)
+jmbot2msg42 = Message.create(body: 'Tinman - Bootstrap: Responsive Web Development', channel_id: learning.id, user_id: tinman.id)
+
+didflxmsg13 = Message.create(body: 'Bo - flexbox in 5 minutes, see  http://flexboxin5.com/ ', channel_id: flexlearn.id, user_id: didley.id)
+sshflxmsg23 = Message.create(body: 'Regarding GIT - there are ways to pretend the sat/sun didn’t happen, but everything works better if you revert! ', channel_id: flexlearn.id, user_id: sideshow.id)
+dd1flxmsg33 = Message.create(body: 'DD - you can use BOTH Flexbox AND Grid, But NOT Flexbox and Bootstrap ', channel_id: flexlearn.id, user_id: douglas.id)
+dd2flxmsg43 = Message.create(body: 'DD - Use BOOTSTRAP for pretty forms, buttons and the like.  Then use the others for everthing else. ', channel_id: flexlearn.id, user_id: douglas.id)
 puts "   End message creation and assignments"
 puts " "
 
